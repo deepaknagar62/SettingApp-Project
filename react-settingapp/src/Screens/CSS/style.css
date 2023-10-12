@@ -1,0 +1,100 @@
+.setting{
+    color: rgb(54, 52, 52);
+    margin-left: 20px;
+    margin-top: 50px;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 200;
+    
+  }
+ 
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.search-icon {
+    margin-right: 10px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+}
+
+
+.search-icon i {
+    color: #333;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  max-width: 400px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-block-start: 20px;
+  height: 30px;
+
+}
+
+.img-icon {
+  margin-right: 20px;
+}
+
+.arrow-icon1 {
+  margin-left: 160px;
+  align-items: end;
+}
+
+.arrow-icon2 {
+  margin-left: 52px;
+  align-items: end;
+}
+
+.arrow-icon3 {
+  margin-left: 126px;
+  align-items: end;
+}
+
+.arrow-icon4 {
+  margin-left: 106px;
+  align-items: end;
+}
+
+.arrow-icon5 {
+  margin-left: 100px;
+  align-items: end;
+}
+
+.arrow-icon6 {
+  margin-left: 168px;
+  align-items: end;
+}
+
+.arrow-icon7 {
+  margin-left: 158px;
+  align-items: end;
+}
+.arrow-icon8 {
+  margin-left: 198px;
+  align-items: end;
+}
+.arrow-icon9 {
+  margin-left: 108px;
+  align-items: end;
+}
