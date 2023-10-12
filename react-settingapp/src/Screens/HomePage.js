@@ -10,16 +10,52 @@ import lockicon from './Images/lock-icon.png';
 import homeicon from './Images/home-icon.png';
 import batteryicon from './Images/battery.png';
 import passwordicon from './Images/fingerprint.png';
-
+import { useNavigate } from 'react-router-dom';
 
 
 
 export default function HomePage(){
+    const navigate = useNavigate();
 
+    const OpenAboutPhone = () => {
+        navigate('/about-phone'); 
+      };
 
+    const OpenSimCards = () =>{
+        navigate('/simcards-network');
+    } 
+    const OpenSoundVibration = ()=>{
+        navigate('/sound-vibration');
+    } 
+
+    const OpenDisplay = ()=>{
+        navigate('/display');
+    }
+
+    const OpenConnectionSharing =()=>{
+        navigate('/connection-sharing');
+    }
+    const OpenLockScreen =()=>{
+        navigate('/lock-screen');
+    }
+
+    const OpenHomeScreen =()=> {
+        navigate('/home-screen');
+    }
+
+    const OpenBattery =()=>{
+        navigate('/battery');
+    }
+
+    const OpenPasswordAndSecurity=()=>{
+        navigate('/password-security');
+    }
     return(
 
-        <>
+         <>
+          
+
+
             <div className='setting'>  Settings </div>
            <div class="search-bar">
             <div class="search-icon">
@@ -28,17 +64,17 @@ export default function HomePage(){
             <input class="search-input" type="text" placeholder="Search settings"/>
             </div>
            
-            <div className="container">
+            <div className="container" onClick={OpenAboutPhone}>
                 <div className="img-icon ">
                     <img src={phoneicon} alt="Phone Icon" width="25" height="25"/>
                 </div>
-                <span>About phone</span>
+                <span>About Phone</span>
                 <div className="arrow-icon1">
                 <img src={arrowicon} alt="Arrow Icon" width="12" height="12"/>
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenSimCards}>
                 <div className="img-icon ">
                     <img src={simcard} alt="SIM Icon" width="25" height="25"/>
                 </div>
@@ -48,7 +84,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenSoundVibration}>
                 <div className="img-icon ">
                     <img src={soundicon} alt="SIM Icon" width="24" height="24"/>
                 </div>
@@ -58,7 +94,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenDisplay}>
                 <div className="img-icon ">
                     <img src={displayicon} alt="SIM Icon" width="25" height="25"/>
                 </div>
@@ -68,7 +104,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenConnectionSharing }>
                 <div className="img-icon ">
                     <img src={connectionicon} alt="SIM Icon" width="25" height="25"/>
                 </div>
@@ -78,7 +114,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenLockScreen}>
                 <div className="img-icon ">
                     <img src={lockicon} alt="SIM Icon" width="25" height="25"/>
                 </div>
@@ -88,7 +124,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenHomeScreen}>
                 <div className="img-icon ">
                     <img src={homeicon} alt="SIM Icon" width="25" height="25"/>
                 </div>
@@ -98,7 +134,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenBattery} >
                 <div className="img-icon ">
                     <img src={batteryicon} alt="SIM Icon" width="24" height="24"/>
                 </div>
@@ -108,7 +144,7 @@ export default function HomePage(){
                 </div>
             </div>
 
-            <div className="container" >
+            <div className="container" onClick={OpenPasswordAndSecurity}>
                 <div className="img-icon ">
                     <img src={passwordicon} alt="SIM Icon" width="25" height="25"/>
                 </div>
