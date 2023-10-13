@@ -10,6 +10,7 @@ import LockScreen from './Screens/LockScreen';
 import HomeScreen from './Screens/HomeScreen';
 import Battery from './Screens/Battery';
 import PasswordAndSecurity from './Screens/PasswordAndSecurity';
+import AllSpecs from './Screens/AllSpecs';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -28,6 +29,10 @@ function App() {
           <Route path="/home-screen" element={<HomeScreen/>} />
           <Route path="/battery" element={<Battery/>} />
           <Route path="/password-security" element={<PasswordAndSecurity/>} />
+
+
+
+          <Route path="/all-specs" element={<AllSpecs/>} />
         </Routes>
     
     </Router>

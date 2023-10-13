@@ -1,0 +1,121 @@
+.setting{
+    color: rgb(54, 52, 52);
+    margin-left: 20px;
+    margin-top: 50px;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 200;
+    
+  }
+
+  .cards{
+    display: flex;
+  }
+
+  .card11 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    height: 200px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.img1{
+    width: 80px;
+    height: 80px;
+    padding-bottom: 40px;
+}
+
+.text1 {
+    font-size: 17px;
+    
+}
+.text2{
+    color: rgb(54, 52, 52);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.text3{
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    margin-top: 45px;
+}
+
+.text4{
+    color: rgb(20, 19, 19);
+    font-size: 16px;
+    margin-top: 0;
+}
+
+.card21 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 70%;
+    max-width: 300px;
+    height: 40px;
+    /* text-align: center; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.card31 {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 70%;
+    max-width: 300px;
+    height: 110px;
+    /* text-align: center; */
+    margin-top: 10px;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.container2 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    max-width: 400px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  
+  }
+
+  .container2 p{
+    margin-left: 100px;
+    font-size: 14px;
+    color: #534d4d;
+    font-weight: 300;
+  }
+
+  .line-container {
+    
+    text-align: center;
+    position: relative;
+    padding: 5px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+
+.line {
+    width: 90%;
+    height: 2px; 
+    background-color: #e0e0e0; 
+    position: absolute;
+    top: 50%; 
+}

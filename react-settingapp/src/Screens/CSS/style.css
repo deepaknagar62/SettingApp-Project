@@ -37,7 +37,7 @@
 }
 
 
-.container {
+.container1 {
   display: flex;
   align-items: center;
   padding: 10px;
@@ -95,6 +95,6 @@
   align-items: end;
 }
 .arrow-icon9 {
-  margin-left: 108px;
+  margin-left: 107px;
   align-items: end;
 }
