@@ -1,7 +1,8 @@
 import React from 'react'
 import './CSS/aboutPhone.css'
-import versionicon from './Images/version.png'
+import versionicon from './Images/deviceicon.jpg'
 import { useNavigate } from 'react-router-dom';
+import Line from '../Components/Line';
 
 
 export default function AboutPhone(){
@@ -12,6 +13,13 @@ export default function AboutPhone(){
         navigate('/all-specs');
     }
 
+    const OpenBackupRestore=()=>{
+        navigate('/backup-restore');
+    }
+    
+    const OpenFactoryReset=()=>{
+        navigate('/factory-reset');
+    }
 
 
     return(
@@ -57,23 +65,19 @@ export default function AboutPhone(){
                 <p style={{marginLeft:'260px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
-            <div class="line-container">
-                <div class="line"></div>
-             </div>
+            <Line></Line>
 
-            <div className="container2" >
+            <div className="container2" onClick={OpenBackupRestore}>
                 <span>Back up and restore</span> 
                 <p style={{marginLeft:'175px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
-            <div className="container2" >
+            <div className="container2" onClick={OpenFactoryReset}>
                 <span>Factory reset</span> 
                 <p style={{marginLeft:'225px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
-            <div class="line-container">
-                <div class="line"></div>
-             </div>
+            <Line></Line>
         </>
     );
 

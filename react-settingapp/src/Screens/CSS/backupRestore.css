@@ -1,0 +1,40 @@
+
+
+.mobile-device {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 90%;
+    max-width: 300px;
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.cloud {
+    display: block;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    max-width: 400px;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 16px;
+  
+  }
+
+  .cloud p{
+    
+    margin-top: 0px;
+    font-size: 14px;
+    color: #534d4d;
+    font-weight: 300;
+    
+  }

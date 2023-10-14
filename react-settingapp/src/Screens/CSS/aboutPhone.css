@@ -103,19 +103,3 @@
     font-weight: 300;
   }
 
-  .line-container {
-    
-    text-align: center;
-    position: relative;
-    padding: 5px;
-    margin-left: 15px;
-    margin-right: 0px;
-}
-
-.line {
-    width: 90%;
-    height: 2px; 
-    background-color: #e0e0e0; 
-    position: absolute;
-    top: 50%; 
-}

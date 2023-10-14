@@ -1,8 +1,8 @@
 import React from 'react'
-import './CSS/allSpecs.css'
-import phoneicon from './Images/phone.png'
-import ramicon from './Images/ramicon.png'
-import cpuicon from './Images/cpuicon.png'
+import '../CSS/allSpecs.css'
+import phoneicon from '../Images/phone.png'
+import ramicon from '../Images/ramicon.png'
+import cpuicon from '../Images/cpuicon.png'
 
 export default function AllSpecs(){
 
