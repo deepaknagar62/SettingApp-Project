@@ -1,0 +1,76 @@
+
+
+.sim-heading{
+    color: rgb(54, 52, 52);
+    margin-left: 20px;
+    margin-top: 50px;
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 200;
+    
+  }
+
+
+  .sim-cards {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 30%;
+    max-width: 300px;
+    height: 60px;
+    /* text-align: center; */
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.options-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%;
+    max-width: 300px;
+    height: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.options{
+  
+  border-radius: 10px;
+  width: 30%;
+  max-width: 300px;
+  height: 35px;
+  margin-top: -10px;
+  margin-left: 10px;
+  display: inline-flex;
+  
+  justify-content: center;
+}
+
+
+.net-settings {
+  display: block;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  max-width: 400px;
+  padding: 5px 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+
+.net-settings  p{
+  
+  margin-top: 0px;
+  font-size: 14px;
+  color: #534d4d;
+  font-weight: 300;
+  
+}

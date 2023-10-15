@@ -29,9 +29,30 @@
     font-size: 16px;
     cursor: pointer;
     width: 300px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .round-button:hover {
     background-color: #0065b8;
 }
+
+
+
+@media screen and (min-width: 1024px) {
+ 
+     
+    .localmoboile-container{
+        width: 30%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        border-radius: 20px;
+        align-items: center;
+        justify-content: center;
+        transform: translate(-50%, -50%);
+    }
+  
+
+  }

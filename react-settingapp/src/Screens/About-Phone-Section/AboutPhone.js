@@ -1,8 +1,10 @@
 import React from 'react'
-import './CSS/aboutPhone.css'
-import versionicon from './Images/deviceicon.jpg'
+import '../CSS/aboutPhone.css'
+import versionicon from '../Images/deviceicon.jpg'
 import { useNavigate } from 'react-router-dom';
-import Line from '../Components/Line';
+import Line from '../../Components/Line';
+import BackArrow from '../../Components/BackArrow';
+import Headingtxt from '../../Components/Headingtxt';
 
 
 export default function AboutPhone(){
@@ -21,11 +23,17 @@ export default function AboutPhone(){
         navigate('/factory-reset');
     }
 
+    const Goback=()=>{
+      navigate('/');
+    }
 
     return(
 
         <>
-          <div className='setting'> About phone</div>
+         <div className='aboutphone-conainer'>  
+         <BackArrow onClick={Goback}></BackArrow> 
+         <Headingtxt headingtxt="About Phone"></Headingtxt>
+          
            <div className='cards'>
                 <div className="card11">
                     <img className='img1' src={versionicon} alt='version'></img>
@@ -78,6 +86,8 @@ export default function AboutPhone(){
             </div>
 
             <Line></Line>
+
+            </div>
         </>
     );
 

@@ -3,10 +3,19 @@ import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/factoryReset.css';
 import Line from '../../Components/Line';
 import reseticon from '../Images/resetimg.png';
+import { useNavigate } from 'react-router-dom';
+import BackArrow from '../../Components/BackArrow';
 
 export default function FactoryReset() {
+  const navigate = useNavigate();
+
+  const Goback=()=>{
+    navigate('/about-phone');
+  }
   return (
     <>
+      <div className='factory-reset-container'> 
+      <BackArrow onClick={Goback}></BackArrow> 
        <Headingtxt headingtxt="Factory reset"></Headingtxt>
        <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'20px',fontWeight:'300' , marginLeft:'20px'}}>
         <span >ERASE THE FOLLOWING ITEMS</span></div>
@@ -34,11 +43,16 @@ export default function FactoryReset() {
           </p>
         </div>
 
+
+         
+        
         <footer class="footer">
         <img src={reseticon} alt="reset"/>
         <p>Erase all data</p>
         
       </footer>
+      </div>  
+      
 
     </>
   )

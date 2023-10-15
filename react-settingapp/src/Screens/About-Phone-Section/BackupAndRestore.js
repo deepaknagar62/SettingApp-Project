@@ -4,6 +4,7 @@ import Line from '../../Components/Line';
 import ToggleBtn from '../../Components/ToggleBtn';
 import Headingtxt from '../../Components/Headingtxt';
 import { useNavigate } from 'react-router-dom';
+import BackArrow from '../../Components/BackArrow';
 
 export default function BackupAndRestore(){
    
@@ -21,11 +22,15 @@ export default function BackupAndRestore(){
   const OpenBackupAccounts=()=>{
     navigate('/backup-accounts');
   }
+  const Goback=()=>{
+    navigate('/about-phone');
+  }
 
     return(
 
         <>
-          {/* <div className='heading'> Back up and restore</div> */}
+         <div className='backup-restore-container'> 
+         <BackArrow onClick={Goback}></BackArrow> 
           <Headingtxt headingtxt="Back up and restore"></Headingtxt>
           
           <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'20px',fontWeight:'300' , marginLeft:'20px'}}><span >LOCAL</span></div>
@@ -79,7 +84,7 @@ export default function BackupAndRestore(){
         </p>
        
       </div>
-
+      </div>
         </>
     );
 }

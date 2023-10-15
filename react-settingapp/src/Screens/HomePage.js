@@ -55,7 +55,7 @@ export default function HomePage(){
 
          <>
           
-
+           <div className='homepage-container'> 
 
             <div className='setting'>  Settings </div>
            <div class="search-bar">
@@ -154,7 +154,7 @@ export default function HomePage(){
                 <img src={arrowicon} alt="Arrow Icon" width="12" height="12"/>
                 </div>
             </div>
-        
+            </div>
         </>
 
     );

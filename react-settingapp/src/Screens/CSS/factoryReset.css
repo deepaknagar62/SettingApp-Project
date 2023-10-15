@@ -33,3 +33,26 @@
     vertical-align: middle;
     height: 20px;
 }
+
+
+.factory-reset-container{
+    padding: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    
+    .factory-reset-container{
+        width: 50%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        border-radius: 20px;
+        
+        transform: translate(-50%, -50%);
+    }
+
+    .footer{
+        position: relative;
+    }
+}

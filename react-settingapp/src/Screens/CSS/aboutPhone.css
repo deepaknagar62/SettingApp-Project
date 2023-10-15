@@ -1,12 +1,3 @@
-.setting{
-    color: rgb(54, 52, 52);
-    margin-left: 20px;
-    margin-top: 50px;
-    padding-top: 10px;
-    font-size: 30px;
-    font-weight: 200;
-    
-  }
 
   .cards{
     display: flex;
@@ -103,3 +94,23 @@
     font-weight: 300;
   }
 
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .aboutphone-conainer{
+        width: 30%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        border-radius: 20px;
+        align-items: center;
+       
+        justify-content: center;
+        transform: translate(-50%, -50%);
+    }
+  
+
+  }

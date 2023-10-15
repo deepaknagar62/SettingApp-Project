@@ -38,3 +38,27 @@
     font-weight: 300;
     
   }
+
+  .backup-restore-container{
+    margin: auto;
+  }
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .backup-restore-container{
+        width: 30%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        border-radius: 20px;
+        align-items: center;
+       
+        justify-content: center;
+        transform: translate(-50%, -50%);
+    }
+  
+
+  }

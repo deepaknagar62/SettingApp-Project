@@ -4,7 +4,8 @@ import '../CSS/backupAccounts.css';
 
 export default function BackupAccounts() {
   return (
-    <>
+    <> 
+      <div className='backupAccounts-container'>  
        <Headingtxt headingtxt="Choose backup account"></Headingtxt> 
   
        <div className="choose-account" style={{marginTop:'50px'}}>
@@ -19,7 +20,7 @@ export default function BackupAccounts() {
        <p> raj883430@gmail.com</p>
        </div>
 
-
+       </div>
     </>
   )
 }

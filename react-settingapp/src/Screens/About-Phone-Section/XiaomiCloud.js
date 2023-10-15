@@ -13,6 +13,7 @@ import ToggleBtn from '../../Components/ToggleBtn';
 export default function XiaomiCloud() {
   return (
     <>
+     <div className='xiaomi-cloud-container'> 
       <Headingtxt headingtxt="Xiaomi Cloud"></Headingtxt>
        
         <div className="xiaomi-card" >
@@ -73,6 +74,8 @@ export default function XiaomiCloud() {
                     Call history </p>
                 <div style={{display:'flex', marginLeft:'43px' , marginRight:'-35px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
+
+         </div> 
     </>
   )
 }

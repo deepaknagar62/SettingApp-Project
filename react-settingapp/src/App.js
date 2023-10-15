@@ -1,8 +1,8 @@
 import './App.css';
 import HomePage from './Screens/HomePage';
 import './Screens/CSS/style.css'
-import AboutPhone from './Screens/AboutPhone';
-import SimCards from './Screens/SimCards';
+import AboutPhone from './Screens/About-Phone-Section/AboutPhone';
+import SimCards from './Screens/SIM-Cards-Networks-Section/SimCards';
 import SoundAndVibration from './Screens/SoundAndVibration';
 import DisplayAndBrightness from './Screens/DisplayAndBrightness';
 import ConnectionAndSharing from './Screens/ConnectionAndSharing';

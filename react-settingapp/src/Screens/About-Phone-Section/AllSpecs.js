@@ -3,13 +3,23 @@ import '../CSS/allSpecs.css'
 import phoneicon from '../Images/phone.png'
 import ramicon from '../Images/ramicon.png'
 import cpuicon from '../Images/cpuicon.png'
+import BackArrow from '../../Components/BackArrow'
+import {useNavigate} from 'react-router-dom'
+import Headingtxt from '../../Components/Headingtxt'
 
 export default function AllSpecs(){
+    const navigate = useNavigate();
 
+    const Goback=()=>{
+      navigate('/about-phone');
+    }
     return(
 
       <>
-        <div className='heading'> All specs</div>
+        
+       <div className='allspecs-container'>  
+        <BackArrow onClick={Goback}></BackArrow> 
+        <Headingtxt headingtxt="All specs"></Headingtxt>
          
         <div className="card1">
             <div style={{display:'flex'}}> 
@@ -26,8 +36,8 @@ export default function AllSpecs(){
            <div>
             <div style={{display:'flex' , marginLeft:'-5px', marginTop:'20px'}}>
            <div className='inCard3'>
-            <img src={cpuicon} alt="icon" width="45" height="45" style={{marginLeft:'0px'}}></img>
-            <p style={{color:'#534d4d' , fontSize:'15px' }}>CPU <p style={{marginTop:'0px' , color:'black' , fontWeight:'500', }}>Octa-core 2.01 GHz</p></p>
+            <img src={cpuicon} alt="icon" width="45" height="45" style={{marginLeft:'10px'}}></img>
+            <p style={{color:'#534d4d' , fontSize:'15px', marginLeft:'20px' }}>CPU <p style={{marginTop:'0px' , color:'black' , fontWeight:'500', }}>Octa-core 2.01 GHz</p></p>
            </div>
            </div>
            </div>
@@ -75,7 +85,7 @@ export default function AllSpecs(){
          <p style={{ marginTop:'10px' , color:'black' , fontWeight:'500'  }}>  Internal Storage<p style={{color:'#534d4d' , fontSize:'15px',marginTop:'2px',fontWeight:'300'}}>Available 4.5 GB / 32 GB</p></p>
        </div>
 
-
+       </div>
       </>
     );
 }
