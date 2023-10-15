@@ -18,6 +18,8 @@ import LocalMoblieBackup from './Screens/About-Phone-Section/LocalMoblieBackup';
 import XiaomiCloud from './Screens/About-Phone-Section/XiaomiCloud';
 import GoogleBackupMyData from './Screens/About-Phone-Section/GoogleBackupMyData';
 import BackupAccounts from './Screens/About-Phone-Section/BackupAccounts';
+import SimcardSettings from './Screens/SIM-Cards-Networks-Section/SimcardSettings';
+import DataRoaming from './Screens/SIM-Cards-Networks-Section/DataRoaming';
 
 function App() {
   return (
@@ -41,11 +43,15 @@ function App() {
           <Route path="/all-specs" element={<AllSpecs/>} />
           <Route path="/backup-restore" element={<BackupAndRestore/>}/>
           <Route path="/factory-reset" element={<FactoryReset/>}></Route>
-
           <Route path='/local-mobile-backup' element={<LocalMoblieBackup/>}></Route>
           <Route path='/xioami-cloud' element={<XiaomiCloud/>}></Route>
           <Route path='/turn-on-backups' element={<GoogleBackupMyData/>}></Route>
           <Route path='/backup-accounts' element={<BackupAccounts/>}></Route>
+
+
+          <Route path='/simcard-settings' element={<SimcardSettings/>}></Route>
+          <Route path='/data-roaming' element={<DataRoaming/>}></Route>
+          
         </Routes>
     
     </Router>

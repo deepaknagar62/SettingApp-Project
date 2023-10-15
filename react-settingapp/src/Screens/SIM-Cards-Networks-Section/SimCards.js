@@ -7,14 +7,26 @@ import sim2 from "../Images/sim2icon.png"
 import bothicon from "../Images/both.png"
 import ToggleBtn from "../../Components/ToggleBtn";
 import Line from "../../Components/Line";
+import { useNavigate } from "react-router-dom";
+
 
 export default function SimCards() {
+ const navigate = useNavigate();
+
+ const OpenSimSettings=()=>{
+  navigate('/simcard-settings')
+ }
+
+ const OpenDataroaming=()=>{
+  navigate('/data-roaming');
+ }
+
   return (
     <>
       <BackArrow></BackArrow>
       <Headingtxt headingtxt="SIM & mobile networks"></Headingtxt>
       <div style={{ display: "flex" }}>
-        <div className="sim-cards">
+        <div className="sim-cards" onClick={OpenSimSettings}>
           <img src={sim1} alt="icon" width="35" height="35"></img>
           <p style={{ color: "#534d4d", fontSize: "18px",marginTop:'2px',fontWeight: "500" }}>
             Jio
@@ -24,7 +36,7 @@ export default function SimCards() {
           </p>
         </div>
 
-        <div className="sim-cards">
+        <div className="sim-cards" onClick={OpenSimSettings}>
 
         <img src={sim2} alt="icon" width="35" height="35"></img>
           <p style={{ color: "#534d4d", fontSize: "18px",marginTop:'2px',fontWeight: "500" }}>
@@ -77,7 +89,7 @@ export default function SimCards() {
             </p>
            </div>
 
-           <div className="net-settings " style={{marginTop:'90px'}}>
+           <div className="net-settings " style={{marginTop:'90px'}} onClick={OpenDataroaming}>
             <span style={{fontSize:"18px"}}>Data roaming</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'-30px' }}>
                  Connect to data services when roaming
