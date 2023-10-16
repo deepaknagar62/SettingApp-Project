@@ -3,7 +3,7 @@ import HomePage from './Screens/HomePage';
 import './Screens/CSS/style.css'
 import AboutPhone from './Screens/About-Phone-Section/AboutPhone';
 import SimCards from './Screens/SIM-Cards-Networks-Section/SimCards';
-import SoundAndVibration from './Screens/SoundAndVibration';
+import SoundAndVibration from './Screens/Sound-Vibration-Section/SoundAndVibration';
 import DisplayAndBrightness from './Screens/DisplayAndBrightness';
 import ConnectionAndSharing from './Screens/ConnectionAndSharing';
 import LockScreen from './Screens/LockScreen';
@@ -20,6 +20,8 @@ import GoogleBackupMyData from './Screens/About-Phone-Section/GoogleBackupMyData
 import BackupAccounts from './Screens/About-Phone-Section/BackupAccounts';
 import SimcardSettings from './Screens/SIM-Cards-Networks-Section/SimcardSettings';
 import DataRoaming from './Screens/SIM-Cards-Networks-Section/DataRoaming';
+import SilentDND from './Screens/Sound-Vibration-Section/SilentDND';
+import SoundAdditionalSet from './Screens/Sound-Vibration-Section/SoundAdditionalSet';
 
 function App() {
   return (
@@ -51,7 +53,12 @@ function App() {
 
           <Route path='/simcard-settings' element={<SimcardSettings/>}></Route>
           <Route path='/data-roaming' element={<DataRoaming/>}></Route>
+
           
+          <Route path='/silent-dnd' element={<SilentDND/>}></Route>
+          <Route path='/sound-additional-settings' element={<SoundAdditionalSet/>}></Route>
+          
+         
         </Routes>
     
     </Router>
