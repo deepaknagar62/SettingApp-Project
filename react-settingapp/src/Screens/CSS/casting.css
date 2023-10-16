@@ -1,0 +1,18 @@
+.casting-container  {
+    display: block;
+    border: 1px solid #ffffff;
+    max-width: 400px;
+    margin-top: 30px;
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+  
+  }
+  
+  .casting-container   p{
+    margin-top: 0px;
+    font-size: 14px;
+    color: #534d4d;
+    font-weight: 300;
+    
+  }

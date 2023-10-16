@@ -4,8 +4,8 @@ import './Screens/CSS/style.css'
 import AboutPhone from './Screens/About-Phone-Section/AboutPhone';
 import SimCards from './Screens/SIM-Cards-Networks-Section/SimCards';
 import SoundAndVibration from './Screens/Sound-Vibration-Section/SoundAndVibration';
-import DisplayAndBrightness from './Screens/DisplayAndBrightness';
-import ConnectionAndSharing from './Screens/ConnectionAndSharing';
+import DisplayAndBrightness from './Screens/Display-Section/DisplayAndBrightness';
+import ConnectionAndSharing from './Screens/Connection-Sharing-Section/ConnectionAndSharing';
 import LockScreen from './Screens/LockScreen';
 import HomeScreen from './Screens/HomeScreen';
 import Battery from './Screens/Battery';
@@ -22,6 +22,13 @@ import SimcardSettings from './Screens/SIM-Cards-Networks-Section/SimcardSetting
 import DataRoaming from './Screens/SIM-Cards-Networks-Section/DataRoaming';
 import SilentDND from './Screens/Sound-Vibration-Section/SilentDND';
 import SoundAdditionalSet from './Screens/Sound-Vibration-Section/SoundAdditionalSet';
+import BrightnessLevel from './Screens/Display-Section/BrightnessLevel';
+import ReadingMode from './Screens/Display-Section/ReadingMode';
+import SystemFont from './Screens/Display-Section/SystemFont';
+import TextSize from './Screens/Display-Section/TextSize';
+import DeviceInVR from './Screens/Display-Section/DeviceInVR';
+import FullscreenMode from './Screens/Display-Section/FullscreenMode';
+import Casting from './Screens/Connection-Sharing-Section/Casting';
 
 function App() {
   return (
@@ -58,7 +65,20 @@ function App() {
           <Route path='/silent-dnd' element={<SilentDND/>}></Route>
           <Route path='/sound-additional-settings' element={<SoundAdditionalSet/>}></Route>
           
-         
+
+          <Route path='/brightness-level' element={<BrightnessLevel/>}></Route>
+          <Route path='/reading-mode' element={<ReadingMode/>}></Route>
+          <Route path='/system-fonts' element={<SystemFont/>}></Route>
+          <Route path='/text-size' element={<TextSize/>}></Route>
+          <Route path='/device-in-vr' element={<DeviceInVR/>}></Route>
+          <Route path='/fullscreen-mode' element={<FullscreenMode/>}></Route>
+
+
+
+          <Route path='/casting' element={<Casting/>}></Route>
+
+
+
         </Routes>
     
     </Router>
