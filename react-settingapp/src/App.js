@@ -29,6 +29,11 @@ import TextSize from './Screens/Display-Section/TextSize';
 import DeviceInVR from './Screens/Display-Section/DeviceInVR';
 import FullscreenMode from './Screens/Display-Section/FullscreenMode';
 import Casting from './Screens/Connection-Sharing-Section/Casting';
+import Printing from './Screens/Connection-Sharing-Section/Printing';
+import SystemPrintingService from './Screens/Connection-Sharing-Section/SystemPrintingService';
+import DataUsage from './Screens/Connection-Sharing-Section/DataUsage';
+import WirelessDisplay from './Screens/Connection-Sharing-Section/WirelessDisplay';
+import ResetWiFiNetwork from './Screens/Connection-Sharing-Section/ResetWiFiNetwork';
 
 function App() {
   return (
@@ -76,6 +81,13 @@ function App() {
 
 
           <Route path='/casting' element={<Casting/>}></Route>
+          <Route path='/printing' element={<Printing/>}></Route>
+          <Route path='/print-services' element={<SystemPrintingService/>}></Route>
+          <Route path='/data-usage' element={<DataUsage/>}></Route>
+          <Route path='/wireless-display' element={<WirelessDisplay/>}></Route>
+          <Route path='/reset-wifi-networks' element={<ResetWiFiNetwork/>}></Route>
+
+          
 
 
 

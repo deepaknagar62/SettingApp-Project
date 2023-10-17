@@ -13,7 +13,7 @@ export default function ReadingMode() {
 
             <div className="reading-container "  >
             <span >Reading mode</span> 
-            <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'40px' }}>
+            <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'40px' }}>
                  Reading mode makes the colour of your display warmer allowing your eye to relax
                  <div style={{display:'flex', marginLeft:'-80px' ,marginTop:'-5px'}}> <ToggleBtn></ToggleBtn></div>
             </p>
@@ -24,7 +24,7 @@ export default function ReadingMode() {
 
            <div className="reading-container "  >
             <span >Schedule</span> 
-            <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'40px' }}>
+            <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'40px' }}>
                  Schedule time to turn Reading mode on and off
                  <div style={{display:'flex', marginLeft:'-80px' ,marginTop:'-5px'}}> <ToggleBtn></ToggleBtn></div>
             </p>

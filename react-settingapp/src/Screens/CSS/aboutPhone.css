@@ -82,13 +82,13 @@
     margin-top: 20px;
     margin-left: 10px;
     height: 30px;
-    font-weight: bold;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 18px;
   
   }
 
   .container2 p{
-    margin-left: 100px;
+    margin-left: 80px;
     font-size: 14px;
     color: #534d4d;
     font-weight: 300;

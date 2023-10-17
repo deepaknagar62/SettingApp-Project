@@ -9,11 +9,13 @@ import msgicon from '../Images/messageicon.png';
 import contacticon from '../Images/contacticon.png';
 import callicon from '../Images/callicon.png';
 import ToggleBtn from '../../Components/ToggleBtn';
+import BackArrow from '../../Components/BackArrow';
 
 export default function XiaomiCloud() {
   return (
     <>
      <div className='xiaomi-cloud-container'> 
+     <BackArrow></BackArrow>
       <Headingtxt headingtxt="Xiaomi Cloud"></Headingtxt>
        
         <div className="xiaomi-card" >

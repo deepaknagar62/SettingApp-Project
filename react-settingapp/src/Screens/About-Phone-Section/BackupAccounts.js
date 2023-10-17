@@ -1,11 +1,13 @@
 import React from 'react'
 import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/backupAccounts.css';
+import BackArrow from '../../Components/BackArrow';
 
 export default function BackupAccounts() {
   return (
     <> 
       <div className='backupAccounts-container'>  
+      <BackArrow></BackArrow>
        <Headingtxt headingtxt="Choose backup account"></Headingtxt> 
   
        <div className="choose-account" style={{marginTop:'50px'}}>

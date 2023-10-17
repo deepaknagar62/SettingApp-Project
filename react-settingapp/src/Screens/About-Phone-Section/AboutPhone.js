@@ -54,7 +54,7 @@ export default function AboutPhone(){
            </div>
 
            <div className="container2" >
-                <span>MIUI version</span> 
+                <span >MIUI version</span> 
                 <p>MIUI Global 12.5.2 stable</p>
             </div>
 
@@ -65,24 +65,24 @@ export default function AboutPhone(){
 
             <div className="container2" >
                 <span>Android security patch level</span> 
-                <p style={{marginLeft:'50px'}}>2023-09-01</p>
+                <p style={{marginLeft:'20px'}}>2023-09-01</p>
             </div>
 
             <div className="container2" onClick={OpenAllSpecs} >
                 <span>All specs</span> 
-                <p style={{marginLeft:'260px' , fontSize:'22px'}}>&#62;</p>
+                <p style={{marginLeft:'240px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
             <Line></Line>
 
             <div className="container2" onClick={OpenBackupRestore}>
                 <span>Back up and restore</span> 
-                <p style={{marginLeft:'175px' , fontSize:'22px'}}>&#62;</p>
+                <p style={{marginLeft:'145px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
             <div className="container2" onClick={OpenFactoryReset}>
                 <span>Factory reset</span> 
-                <p style={{marginLeft:'225px' , fontSize:'22px'}}>&#62;</p>
+                <p style={{marginLeft:'200px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
             <Line></Line>

@@ -35,7 +35,7 @@ export default function BackupAndRestore(){
           
           <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'20px',fontWeight:'300' , marginLeft:'20px'}}><span >LOCAL</span></div>
          <div className="mobile-device" onClick={OpenMoblieDevice}>
-         <p style={{ marginTop:'10px' , color:'black' , fontWeight:'500' ,fontSize:"18px" }}>  Mobile device 
+         <p style={{ marginTop:'10px' , color:'black' , fontWeight:'600' ,fontSize:"18px" }}>  Mobile device 
          <p style={{color:'#534d4d' , fontSize:'15px',marginTop:'2px',fontWeight:'300'}}>Back up and restore items on this device</p></p>
        </div>
        <br></br>
@@ -61,7 +61,7 @@ export default function BackupAndRestore(){
        
       <div className="cloud" onClick={OpenGoogleBackupData}>
             
-        <span style={{fontSize:"18px"}}>Back up my data</span> 
+        <span style={{fontSize:"18px" ,fontWeight:'600'}}>Back up my data</span> 
         <p style={{display:'flex', justifyItems:'center' ,fontSize:'17px'}}> on
         <p style={{marginLeft:'280px' , fontSize:'25px', marginTop:'-15px' }}>&#62;</p></p>
 
@@ -69,7 +69,7 @@ export default function BackupAndRestore(){
 
       <div className="cloud" style={{marginTop:'30px'}} onClick={OpenBackupAccounts}>
             
-        <span style={{fontSize:"18px"}}>Backup account</span> 
+        <span style={{fontSize:"18px" ,fontWeight:'600'}}>Backup account</span> 
         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px'}}> nagardeepak9098@gmail.com
         <p style={{marginLeft:'110px' , fontSize:'25px', marginTop:'-15px' }}>&#62;</p></p>
 
@@ -77,7 +77,7 @@ export default function BackupAndRestore(){
 
       <div className="cloud" style={{marginTop:'30px'}}>
             
-        <span style={{fontSize:"18px"}}>Automatic restore</span> 
+        <span style={{fontSize:"18px" ,fontWeight:'600'}}>Automatic restore</span> 
         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px' }}>
              When reinstalling an app, restore backed-up settings and data
              <div style={{display:'flex', marginRight:'35px'}}> <ToggleBtn ></ToggleBtn></div>

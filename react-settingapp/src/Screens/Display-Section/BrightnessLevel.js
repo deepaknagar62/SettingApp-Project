@@ -15,7 +15,7 @@ export default function BrightnessLevel() {
 
 
          <div style={{marginTop:'10px', display:'flex'}} >
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500', marginRight:'-30px'}}>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550', marginRight:'-30px'}}>
                  Automatic brightness </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'5px'}}> <ToggleBtn ></ToggleBtn></div>
            </div>  
@@ -33,7 +33,7 @@ export default function BrightnessLevel() {
          
 
              <div style={{marginTop:'10px', display:'flex'}} >
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500', marginRight:'-30px'}}>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550', marginRight:'-30px'}}>
                  Sunlight mode </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'65px'}}> <ToggleBtn ></ToggleBtn></div>
            </div> 

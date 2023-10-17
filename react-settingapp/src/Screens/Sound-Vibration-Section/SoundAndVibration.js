@@ -52,7 +52,7 @@ export default function SoundAndVibration(){
             <span >SOUND</span></div> 
 
             <div className='silent-container' onClick={OpneSilentDND} >
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500'}}> Silent/DND </span>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Silent/DND </span>
              <div style={{marginTop:'15px',display:'flex' , marginLeft:'200px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
             </div>
            
@@ -95,14 +95,14 @@ export default function SoundAndVibration(){
 
 
             <div style={{marginTop:'10px', display:'flex'}} >
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500'}}>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}>
                  Vibrate for calls </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'20px'}}> <ToggleBtn ></ToggleBtn></div>
            </div>   
 
 
             <div style={{marginTop:'10px', display:'flex'}} >
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500'}}>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}>
                  Vibrate in silent mode </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'-37px'}}> <ToggleBtn ></ToggleBtn></div>
            </div>    
@@ -112,7 +112,7 @@ export default function SoundAndVibration(){
 
 
           <div className='silent-container' onClick={OpneAdditionals} style={{marginBottom:'10px'}}>
-             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'500'}}> Additional settings </span>
+             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Additional settings </span>
              <div style={{marginTop:'15px',display:'flex' , marginLeft:'110px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
             </div>
 

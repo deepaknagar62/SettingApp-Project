@@ -50,7 +50,7 @@ export default function FactoryReset() {
         <img src={reseticon} alt="reset"/>
         <p>Erase all data</p>
         
-      </footer>
+        </footer>
       </div>  
       
 

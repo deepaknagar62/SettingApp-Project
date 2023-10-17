@@ -2,10 +2,12 @@ import React from 'react'
 import Headingtxt from '../../Components/Headingtxt'
 import ToggleBtn from '../../Components/ToggleBtn'
 import '../CSS/googlebackup.css'
+import BackArrow from '../../Components/BackArrow'
 export default function GoogleBackupMyData() {
   return (
     <>  
        <div className='googlebackup-container'>  
+       <BackArrow></BackArrow>
        <Headingtxt headingtxt="Back up my data"></Headingtxt>
        <div style={{display:'flex' , marginTop:'20px' , alignItems:'center'}}>
          <h2 style={{marginLeft:'20px' ,marginTop:'20px' , fontWeight:'400'}}>Turn on backups</h2>

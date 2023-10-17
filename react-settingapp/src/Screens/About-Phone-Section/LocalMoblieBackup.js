@@ -5,11 +5,13 @@ import messageicon from "../Images/messageicon.png";
 import appicon from "../Images/appicon.png";
 import copyicon from "../Images/copyicon.png";
 import ToggleBtn from "../../Components/ToggleBtn";
+import BackArrow from "../../Components/BackArrow";
 
 export default function LocalMoblieBackup() {
   return (
     <>
       <div className="localmoboile-container">
+        <BackArrow></BackArrow>
         <Headingtxt headingtxt="Back up Restore"></Headingtxt>
 
         <div className="mobile-restore">
