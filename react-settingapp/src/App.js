@@ -6,8 +6,8 @@ import SimCards from './Screens/SIM-Cards-Networks-Section/SimCards';
 import SoundAndVibration from './Screens/Sound-Vibration-Section/SoundAndVibration';
 import DisplayAndBrightness from './Screens/Display-Section/DisplayAndBrightness';
 import ConnectionAndSharing from './Screens/Connection-Sharing-Section/ConnectionAndSharing';
-import LockScreen from './Screens/LockScreen';
-import HomeScreen from './Screens/HomeScreen';
+import LockScreen from './Screens/Lock-Screen-Section/LockScreen';
+import HomeScreen from './Screens/Home-Screen-Section/HomeScreen';
 import Battery from './Screens/Battery';
 import PasswordAndSecurity from './Screens/PasswordAndSecurity';
 import AllSpecs from './Screens/About-Phone-Section/AllSpecs';
@@ -34,6 +34,10 @@ import SystemPrintingService from './Screens/Connection-Sharing-Section/SystemPr
 import DataUsage from './Screens/Connection-Sharing-Section/DataUsage';
 import WirelessDisplay from './Screens/Connection-Sharing-Section/WirelessDisplay';
 import ResetWiFiNetwork from './Screens/Connection-Sharing-Section/ResetWiFiNetwork';
+import GlanceMi from './Screens/Lock-Screen-Section/GlanceMi';
+import DefaultLauncher from './Screens/Home-Screen-Section/DefaultLauncher';
+import InHomeScreen from './Screens/Home-Screen-Section/InHomeScreen';
+
 
 function App() {
   return (
@@ -88,7 +92,12 @@ function App() {
           <Route path='/reset-wifi-networks' element={<ResetWiFiNetwork/>}></Route>
 
           
+          
+          <Route path='/glance-for-mi' element={<GlanceMi/>}></Route>
 
+
+          <Route path='/default-home-screen' element={<DefaultLauncher/>}></Route>
+          <Route path='/inside-home-screen' element={<InHomeScreen/>}></Route>
 
 
         </Routes>

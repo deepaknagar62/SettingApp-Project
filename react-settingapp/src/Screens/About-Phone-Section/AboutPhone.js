@@ -60,7 +60,7 @@ export default function AboutPhone(){
 
             <div className="container2" >
                 <span>Android version</span> 
-                <p style={{marginLeft:'75px'}}>10 QKQ1.191014.001</p>
+                <p style={{marginLeft:'60px'}}>10 QKQ1.191014.001</p>
             </div>
 
             <div className="container2" >
@@ -77,12 +77,12 @@ export default function AboutPhone(){
 
             <div className="container2" onClick={OpenBackupRestore}>
                 <span>Back up and restore</span> 
-                <p style={{marginLeft:'145px' , fontSize:'22px'}}>&#62;</p>
+                <p style={{marginLeft:'135px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
             <div className="container2" onClick={OpenFactoryReset}>
                 <span>Factory reset</span> 
-                <p style={{marginLeft:'200px' , fontSize:'22px'}}>&#62;</p>
+                <p style={{marginLeft:'195px' , fontSize:'22px'}}>&#62;</p>
             </div>
 
             <Line></Line>

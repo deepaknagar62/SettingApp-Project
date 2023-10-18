@@ -1,11 +1,11 @@
-.volume-container2 {
+.volume-container4 {
     display: flex;
     align-items: center;
     height: 30px;
     
   }
   
-  .volume-bar2 {
+  .volume-bar4 {
     background-color: #bdc3c7;
     height: 25px;
     width: 90%;
@@ -15,7 +15,7 @@
     margin-right: 20px;
   }
   
-  .volume-fill2 {
+  .volume-fill4 {
     background-color: #3498db;
     height: 100%;
     border-radius: 5px;

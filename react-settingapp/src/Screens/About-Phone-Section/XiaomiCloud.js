@@ -29,7 +29,7 @@ export default function XiaomiCloud() {
 
         <div className="xiaomi-icons">
         <img src={messageicon} alt='message'></img>
-            <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' }}>
+            <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                 Backup </p>
             <div style={{display:'flex', marginLeft:'50px'}}> <ToggleBtn ></ToggleBtn></div>
          </div>
@@ -38,9 +38,9 @@ export default function XiaomiCloud() {
             <div className="xiaomi-icons">
        
                 <img src={finddevice} alt='message'></img>
-                <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' , marginRight:'-25px'}}>
+                <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' , marginRight:'-25px'}}>
                     Find Device </p>
-                <div style={{display:'flex', marginLeft:'40px' , marginRight:'-35px'}}> <ToggleBtn ></ToggleBtn></div>
+                <div style={{display:'flex', marginLeft:'32px' , marginRight:'-35px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
             <br></br><br></br>
             <Line></Line>
@@ -49,32 +49,32 @@ export default function XiaomiCloud() {
 
             <div className="xiaomi-icons">
                 <img src={garlleryicon} alt='message'></img>
-                <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' }}>
+                <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     Gallery </p>
                 <div style={{display:'flex', marginLeft:'50px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
 
             <div className="xiaomi-icons">
                 <img src={msgicon} alt='message'></img>
-                <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' }}>
+                <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     Messages </p>
-                <div style={{display:'flex', marginLeft:'30px'}}> <ToggleBtn ></ToggleBtn></div>
+                <div style={{display:'flex', marginLeft:'25px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
 
 
             <div className="xiaomi-icons">
                 <img src={contacticon } alt='message'></img>
-                <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' }}>
+                <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     Contacts </p>
-                <div style={{display:'flex', marginLeft:'38px'}}> <ToggleBtn ></ToggleBtn></div>
+                <div style={{display:'flex', marginLeft:'34px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
 
             <div className="xiaomi-icons">
        
                 <img src={callicon} alt='message'></img>
-                <p style={{ marginTop:'5px', color:'black' , fontWeight:'500' ,fontSize:"18px",marginLeft:'25px' , marginRight:'-25px'}}>
+                <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' , marginRight:'-25px'}}>
                     Call history </p>
-                <div style={{display:'flex', marginLeft:'43px' , marginRight:'-35px'}}> <ToggleBtn ></ToggleBtn></div>
+                <div style={{display:'flex', marginLeft:'36px' , marginRight:'-35px'}}> <ToggleBtn ></ToggleBtn></div>
             </div>
 
          </div> 

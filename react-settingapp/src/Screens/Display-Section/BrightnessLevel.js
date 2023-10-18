@@ -21,9 +21,9 @@ export default function BrightnessLevel() {
            </div>  
           
            <div style={{marginLeft:'20px', marginTop:'20px'}}>  
-           <div class="volume-container2">
-            <div class="volume-bar2" id="volume-bar">
-                <div class="volume-fill2" id="volume-fill" style={{width:'70%'}}></div>
+           <div class="volume-container4">
+            <div class="volume-bar4" id="volume-bar">
+                <div class="volume-fill4" id="volume-fill" style={{width:'70%'}}></div>
             </div>
             </div> 
             </div>  

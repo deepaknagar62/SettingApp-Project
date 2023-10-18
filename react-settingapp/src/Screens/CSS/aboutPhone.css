@@ -23,7 +23,8 @@
 }
 
 .text1 {
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 550;
     
 }
 .text2{
@@ -82,14 +83,14 @@
     margin-top: 20px;
     margin-left: 10px;
     height: 30px;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 550;
+    font-size: 20px;
   
   }
 
   .container2 p{
-    margin-left: 80px;
-    font-size: 14px;
+    margin-left: 60px;
+    font-size: 15px;
     color: #534d4d;
     font-weight: 300;
   }
