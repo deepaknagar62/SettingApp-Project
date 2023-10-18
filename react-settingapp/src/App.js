@@ -98,6 +98,8 @@ function App() {
 
           <Route path='/default-home-screen' element={<DefaultLauncher/>}></Route>
           <Route path='/inside-home-screen' element={<InHomeScreen/>}></Route>
+          <Route path='/inside-home-screen' element={<InHomeScreen/>}></Route>
+
 
 
         </Routes>
