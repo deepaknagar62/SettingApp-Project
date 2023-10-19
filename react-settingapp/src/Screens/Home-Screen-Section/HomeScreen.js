@@ -16,6 +16,9 @@ export default function HomeScreen(){
     const opneHomescreen=()=>{
         navigate('/inside-home-screen')
     }
+    const openSystemNavig=()=>{
+        navigate('/system-navigation')
+    }
 
     return(
 
@@ -48,7 +51,7 @@ export default function HomeScreen(){
                     <span >SYSTEM NAVIGATION</span></div>
 
 
-                <div style={{marginTop:'10px', display:'flex'}} >
+                <div style={{marginTop:'10px', display:'flex'}} onClick={openSystemNavig}>
                     <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                         System navigation </span>
                     <div style={{marginTop:'20px',display:'flex' , marginLeft:'140px',fontSize:'25px',fontWeight:'200'}}> &#62;</div>
@@ -75,12 +78,6 @@ export default function HomeScreen(){
                     
                </div>
 
-
-               <div style={{marginTop:'10px', display:'flex'}} >
-                    <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
-                        icon size </span>
-                    <div style={{marginTop:'20px',display:'flex' , marginLeft:'230px',fontSize:'25px',fontWeight:'200'}}> &#62;</div>
-                </div>
 
                 <div style={{marginTop:'10px', display:'flex'}} >
                     <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>

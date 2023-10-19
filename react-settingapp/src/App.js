@@ -8,8 +8,8 @@ import DisplayAndBrightness from './Screens/Display-Section/DisplayAndBrightness
 import ConnectionAndSharing from './Screens/Connection-Sharing-Section/ConnectionAndSharing';
 import LockScreen from './Screens/Lock-Screen-Section/LockScreen';
 import HomeScreen from './Screens/Home-Screen-Section/HomeScreen';
-import Battery from './Screens/Battery';
-import PasswordAndSecurity from './Screens/PasswordAndSecurity';
+import Battery from './Screens/Battery-Section/Battery';
+import PasswordAndSecurity from './Screens/Password-Security-Section/PasswordAndSecurity';
 import AllSpecs from './Screens/About-Phone-Section/AllSpecs';
 import BackupAndRestore from './Screens/About-Phone-Section/BackupAndRestore';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -37,6 +37,13 @@ import ResetWiFiNetwork from './Screens/Connection-Sharing-Section/ResetWiFiNetw
 import GlanceMi from './Screens/Lock-Screen-Section/GlanceMi';
 import DefaultLauncher from './Screens/Home-Screen-Section/DefaultLauncher';
 import InHomeScreen from './Screens/Home-Screen-Section/InHomeScreen';
+import SystemNavigation from './Screens/Home-Screen-Section/SystemNavigation';
+import ScreenLock from './Screens/Password-Security-Section/ScreenLock';
+import FaceUnlock from './Screens/Password-Security-Section/FaceUnlock';
+import UnlockViaBluetooth from './Screens/Password-Security-Section/UnlockViaBluetooth';
+import PrivacyProtectionPassword from './Screens/Password-Security-Section/PrivacyProtectionPassword';
+import EmergencyAlerts from './Screens/Password-Security-Section/EmergencyAlerts';
+import EmergencySOS from './Screens/Password-Security-Section/EmergencySOS';
 
 
 function App() {
@@ -98,8 +105,16 @@ function App() {
 
           <Route path='/default-home-screen' element={<DefaultLauncher/>}></Route>
           <Route path='/inside-home-screen' element={<InHomeScreen/>}></Route>
-          <Route path='/inside-home-screen' element={<InHomeScreen/>}></Route>
+          <Route path='/system-navigation' element={<SystemNavigation/>}></Route>
 
+
+
+          <Route path='/change-screen-lock' element={<ScreenLock/>}></Route>
+          <Route path='/face-lock' element={<FaceUnlock/>}></Route>
+          <Route path='/bluetooth-unlock' element={<UnlockViaBluetooth/>}></Route>
+          <Route path='/privacy-protection-password' element={<PrivacyProtectionPassword/>}></Route>
+          <Route path='/emergency-alerts' element={<EmergencyAlerts/>}></Route>
+          <Route path='/emergency-sos' element={<EmergencySOS/>}></Route>
 
 
         </Routes>
