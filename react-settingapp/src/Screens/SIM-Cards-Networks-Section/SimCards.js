@@ -23,7 +23,7 @@ export default function SimCards() {
 
   return (
     <>
-      <BackArrow></BackArrow>
+      <BackArrow on></BackArrow>
       <Headingtxt headingtxt="SIM & mobile networks"></Headingtxt>
       <div style={{ display: "flex" }}>
         <div className="sim-cards" onClick={OpenSimSettings}>

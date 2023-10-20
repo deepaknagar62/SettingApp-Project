@@ -2,11 +2,17 @@ import React from "react";
 import BackArrow from "../../Components/BackArrow";
 import Headingtxt from "../../Components/Headingtxt";
 import ToggleBtn from "../../Components/ToggleBtn";
+import { useNavigate } from "react-router-dom";
 
 export default function DataRoaming() {
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/simcards-network')
+}
+
   return (
     <>
-      <BackArrow></BackArrow>
+      <BackArrow onClick={goback}></BackArrow>
       <Headingtxt headingtxt="Data roaming"></Headingtxt>
       <div
         style={{

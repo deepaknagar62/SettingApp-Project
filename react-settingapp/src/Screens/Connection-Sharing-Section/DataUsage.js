@@ -22,13 +22,9 @@ export default function DataUsage() {
                 <img src={printer} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     Mobile hotspots 
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                    <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>900.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>900.0 MB</p>
+                     
       
                 
             </div> 
@@ -37,13 +33,9 @@ export default function DataUsage() {
                 <img src={appicon} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black', fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     System apps 
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                    <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>600.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>600.0 MB</p>
+                     
       
                 
             </div> 
@@ -52,13 +44,9 @@ export default function DataUsage() {
                 <img src={youtube} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     YouTube 
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                    <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px"}}>400.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>400.0 MB</p>
+                    
       
                 
             </div> 
@@ -68,13 +56,9 @@ export default function DataUsage() {
                 <img src={callicon} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     Truecaller 
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                    <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>200.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>200.0 MB</p>
+                    
       
                 
             </div> 
@@ -84,13 +68,9 @@ export default function DataUsage() {
                 <img src={linkedin} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                     LinkedIn
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                    <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>190.4 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>190.4 MB</p>
+                     
       
                 
             </div> 
@@ -99,13 +79,9 @@ export default function DataUsage() {
                 <img src={message} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                    Messages
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                   <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>160.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>160.0 MB</p>
+                     
       
                 
             </div> 
@@ -115,13 +91,9 @@ export default function DataUsage() {
                 <img src={paytm} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                    Paytm
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                   <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>100.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>100.0 MB</p>
+                     
       
                 
             </div> 
@@ -130,13 +102,9 @@ export default function DataUsage() {
                 <img src={music} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                    Music
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                   <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>100.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>100.0 MB</p>
+                    
       
                 
             </div> 
@@ -145,15 +113,9 @@ export default function DataUsage() {
                 <img src={contact} alt='message'></img>
                 <p style={{ marginTop:'5px', color:'black',marginRight:'-30px' , fontWeight:'550' ,fontSize:"20px",marginLeft:'25px' }}>
                    Chrome
-                    <div class="volume-container2">
-                    <div class="volume-bar2" id="volume-bar">
-                        <div class="volume-fill2" id="volume-fill" style={{width:'100%'}}></div>
-                    </div>
-                    </div>
+                <p style={{ marginTop:'0px', fontWeight:'250' ,fontSize:"14px" }}>80.0 MB</p>
                      </p>
-                     <p style={{ marginTop:'25px', fontWeight:'250' ,fontSize:"14px",marginLeft:'15px' }}>80.0 MB</p>
-      
-                
+                 
             </div> 
       
     </>

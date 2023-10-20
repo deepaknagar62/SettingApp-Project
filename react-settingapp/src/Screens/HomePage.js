@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './CSS/style.css'
 import phoneicon from './Images/phone-icon.png';
 import simcard from './Images/sim-card.png'
@@ -12,6 +12,7 @@ import passwordicon from './Images/fingerprint.png';
 
 import { useNavigate } from 'react-router-dom';
 import Line from '../Components/Line';
+
 
 
 
@@ -51,6 +52,9 @@ export default function HomePage(){
     const OpenPasswordAndSecurity=()=>{
         navigate('/password-security');
     }
+
+
+
     return(
 
          <>
@@ -147,7 +151,17 @@ export default function HomePage(){
                 <span style={{fontSize:'20px' ,fontWeight:'550'}}>Password & security</span>
                 <div style={{fontSize:'25px',marginLeft:'80px',fontWeight:'200'}}> &#62;</div>
             </div>
+
+
+             
+
             </div>
+
+
+
+
+
+           
         </>
 
     );

@@ -14,23 +14,23 @@
     
 }
 
-.volume-container2 {
+.volume-data {
     display: flex;
     align-items: center;
     height: 10px;
     
   }
   
-  .volume-bar2 {
+  .volume-bar-data {
     background-color: #bdc3c7;
     height: 10px;
-    width: 90%;
+    width: 40%;
     border-radius: 15px;
     cursor: pointer;
     margin-right: 20px;
   }
   
-  .volume-fill2 {
+  .volume-fill-data{
     background-color: #3498db;
     height: 100%;
     border-radius: 5px;

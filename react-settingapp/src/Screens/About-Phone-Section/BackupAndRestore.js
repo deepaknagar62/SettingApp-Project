@@ -80,7 +80,7 @@ export default function BackupAndRestore(){
         <span style={{fontWeight:'550' ,fontSize:"20px"}}>Automatic restore</span> 
         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px' }}>
              When reinstalling an app, restore backed-up settings and data
-             <div style={{display:'flex', marginRight:'35px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{display:'flex', marginRight:'35px'}}> <ToggleBtn name="automatic_restore"></ToggleBtn></div>
         </p>
        
       </div>

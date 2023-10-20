@@ -4,12 +4,26 @@ import BackArrow from '../../Components/BackArrow'
 import ToggleBtn from '../../Components/ToggleBtn'
 import '../CSS/simcardSettings.css'
 import Line from '../../Components/Line'
+import { useNavigate } from 'react-router-dom'
 
 export default function SimcardSettings() {
+ 
+    const navigate = useNavigate();
+    const openPrefNetwork=()=>{
+        navigate('/preferred-network')
+    }
+    const openMobileNetwork=()=>{
+        navigate('/mobile-networks')
+    }
+
+    const goback=()=>{
+        navigate('/simcards-network')
+    }
+
   return (
     <>
  
-      <BackArrow></BackArrow>
+      <BackArrow onClick={goback}></BackArrow>
      <Headingtxt headingtxt="SIM card settings"></Headingtxt>
       
          <div className='sim-net-container' >
@@ -39,12 +53,12 @@ export default function SimcardSettings() {
          <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'20px',fontWeight:'300' , marginLeft:'20px'}}>
             <span >MOBILE NETWORK</span></div> 
 
-        <div className='sim-net-container' >
+        <div className='sim-net-container' onClick={openPrefNetwork} >
             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Preferred network type </span>
             <div style={{marginTop:'20px',display:'flex' , marginLeft:'70px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
          </div>   
 
-         <div className='sim-net-container' >
+         <div className='sim-net-container' onClick={openMobileNetwork}  >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Mobile networks </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'130px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
          </div>

@@ -44,6 +44,9 @@ import UnlockViaBluetooth from './Screens/Password-Security-Section/UnlockViaBlu
 import PrivacyProtectionPassword from './Screens/Password-Security-Section/PrivacyProtectionPassword';
 import EmergencyAlerts from './Screens/Password-Security-Section/EmergencyAlerts';
 import EmergencySOS from './Screens/Password-Security-Section/EmergencySOS';
+import PreferredNetwork from './Screens/SIM-Cards-Networks-Section/PreferredNetwork';
+import MobileNeotworks from './Screens/SIM-Cards-Networks-Section/MobileNeotworks';
+import ToggleButton from './Components/ToggleButton';
 
 
 function App() {
@@ -53,6 +56,7 @@ function App() {
       
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/toggle" element={<ToggleButton />} />
           <Route path="/about-phone" element={<AboutPhone />} />
           <Route path="/simcards-network" element={<SimCards/>} />
           <Route path="/sound-vibration" element={<SoundAndVibration/>} />
@@ -76,6 +80,8 @@ function App() {
 
           <Route path='/simcard-settings' element={<SimcardSettings/>}></Route>
           <Route path='/data-roaming' element={<DataRoaming/>}></Route>
+          <Route path='/preferred-network' element={<PreferredNetwork/>}></Route>
+          <Route path='/mobile-networks' element={<MobileNeotworks/>}></Route>
 
           
           <Route path='/silent-dnd' element={<SilentDND/>}></Route>
