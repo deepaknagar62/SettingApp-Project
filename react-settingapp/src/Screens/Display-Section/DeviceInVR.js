@@ -1,12 +1,18 @@
 import React from 'react'
 import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
+import { useNavigate } from 'react-router-dom';
 
 export default function DeviceInVR() {
+
+   const navigate = useNavigate();
+   const goback=()=>{
+     navigate('/display')
+   }
   return (
     <>
 
-       <BackArrow></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="When device is in VR"></Headingtxt>
 
        <div style={{backgroundColor:'#ffffff', borderRadius:'10px', 

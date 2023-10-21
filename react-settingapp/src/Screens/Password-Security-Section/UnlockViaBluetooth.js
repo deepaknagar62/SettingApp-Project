@@ -22,7 +22,7 @@ export default function UnlockViaBluetooth() {
         <div style={{marginTop:'10px', display:'flex'}} >
             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                 Unlock device </span>
-            <div style={{marginTop:'20px',display:'flex' , marginLeft:'50px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+            <div style={{marginTop:'20px',display:'flex' , marginLeft:'50px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="unlockUsingBlutooth"></ToggleBtn></div>
             </div>  
 
 

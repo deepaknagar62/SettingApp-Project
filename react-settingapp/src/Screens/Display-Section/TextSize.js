@@ -2,11 +2,17 @@ import React from 'react'
 import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/silentDND.css'
+import { useNavigate } from 'react-router-dom';
 
 export default function TextSize() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/display')
+  }
   return (
     <>
-       <BackArrow></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Text Size"></Headingtxt>
 
        <div className="choose-silent-option" style={{marginTop:'20px'}}>

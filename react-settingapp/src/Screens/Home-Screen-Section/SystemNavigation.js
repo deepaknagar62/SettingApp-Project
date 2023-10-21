@@ -5,11 +5,17 @@ import card1 from '../Images/card1.png'
 import Line from '../../Components/Line';
 import '../CSS/systemNavigation.css'
 import ToggleBtn from '../../Components/ToggleBtn';
+import { useNavigate } from 'react-router-dom';
 export default function SystemNavigation() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/home-screen')
+  }
   return (
     <>
 
-        <BackArrow></BackArrow>
+        <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="System navigation"></Headingtxt>
 
 
@@ -28,9 +34,9 @@ export default function SystemNavigation() {
 
            <div style={{marginTop:'70px', display:'flex'}} >
                 <span style={{marginLeft:'20px',marginTop:'20px',marginRight:'50px' ,fontSize:'20px',fontWeight:'550'}}>
-                    Mirro buttons
+                    Mirror buttons
                     <p style={{marginLeft:'0px',marginTop:'0px',marginRight:'50px' ,fontSize:'15px',fontWeight:'250'}}> Mirror back and Menu buttons </p>
-                    <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div></span>
+                    <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="SysNav_mirrorbtn"></ToggleBtn></div></span>
               </div>
       
     </>

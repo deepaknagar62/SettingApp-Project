@@ -6,11 +6,17 @@ import card2 from '../Images/card2.png'
 import Line from '../../Components/Line';
 import '../CSS/InHomeScreen.css'
 import ToggleBtn from '../../Components/ToggleBtn'
+import { useNavigate } from 'react-router-dom'
 export default function InHomeScreen() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/home-screen')
+  }
   return (
     <>
 
-        <BackArrow></BackArrow>
+        <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Home screen"></Headingtxt>
         
         <div style={{display:'flex'}}>  
@@ -29,7 +35,7 @@ export default function InHomeScreen() {
                 <span style={{marginLeft:'20px',marginTop:'20px',marginRight:'50px' ,fontSize:'20px',fontWeight:'550'}}>
                     Swipe up on the Home screen 
                     <p style={{marginLeft:'0px',marginTop:'0px',marginRight:'50px' ,fontSize:'20px',fontWeight:'550'}}> to open serach </p>
-                    <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div></span>
+                    <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="inHome_swipeUpHomeScreen"></ToggleBtn></div></span>
               </div>
                
     </>

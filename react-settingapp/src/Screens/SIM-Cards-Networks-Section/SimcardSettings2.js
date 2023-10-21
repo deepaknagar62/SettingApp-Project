@@ -1,19 +1,18 @@
 import React from 'react'
-import Headingtxt from '../../Components/Headingtxt'
-import BackArrow from '../../Components/BackArrow'
-import ToggleBtn from '../../Components/ToggleBtn'
+import Line from '../../Components/Line';
+import ToggleBtn from '../../Components/ToggleBtn';
+import BackArrow from '../../Components/BackArrow';
+import Headingtxt from '../../Components/Headingtxt';
+import { useNavigate } from 'react-router-dom';
 import '../CSS/simcardSettings.css'
-import Line from '../../Components/Line'
-import { useNavigate } from 'react-router-dom'
 
-export default function SimcardSettings() {
- 
+export default function SimcardSettings2() {
     const navigate = useNavigate();
     const openPrefNetwork=()=>{
-        navigate('/preferred-network')
+        navigate('/preferred-network2')
     }
     const openMobileNetwork=()=>{
-        navigate('/mobile-networks')
+        navigate('/mobile-networks2')
     }
 
     const goback=()=>{
@@ -28,7 +27,7 @@ export default function SimcardSettings() {
       
          <div className='sim-net-container' >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Turn on </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'100px'}}> <ToggleBtn name="simcard_turnOn1"></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'100px'}}> <ToggleBtn name="simcard_turnOn2"></ToggleBtn></div>
          </div>
          <br></br>
          <Line></Line>
@@ -67,7 +66,7 @@ export default function SimcardSettings() {
             <span style={{fontSize:"20px" ,fontWeight:'600'}}>Use VoLTE</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'39px',marginTop:'0px' }}>
                  Use VoLTE to improve the quality of voice calls
-                 <div style={{display:'flex', marginLeft:'-65px',marginTop:'-10px'}}> <ToggleBtn name="simcard_useVolte1" ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-65px',marginTop:'-10px'}}> <ToggleBtn name="simcard_useVolte2" ></ToggleBtn></div>
             </p>
            </div>
 
@@ -78,10 +77,10 @@ export default function SimcardSettings() {
             <span style={{fontSize:"20px" ,fontWeight:'600'}}>Make calls using Wi-Fi</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'39px',marginTop:'0px' }}>
                  Use Wi-Fi to make and receive calls whenever possible
-                 <div style={{display:'flex', marginLeft:'-65px',marginTop:'-10px'}}> <ToggleBtn name="simcard_makeCallWiFi1"></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-65px',marginTop:'-10px'}}> <ToggleBtn name="simcard_makeCallWiFi2"></ToggleBtn></div>
             </p>
            </div>
-        
-    </>
+
+           </>
   )
 }

@@ -6,12 +6,18 @@ import appicon from "../Images/appicon.png";
 import copyicon from "../Images/copyicon.png";
 import ToggleBtn from "../../Components/ToggleBtn";
 import BackArrow from "../../Components/BackArrow";
+import { useNavigate } from "react-router-dom";
 
 export default function LocalMoblieBackup() {
+  const navigate = useNavigate();
+
+  const goback=()=>{
+    navigate('/backup-restore')
+  }
   return (
     <>
       <div className="localmoboile-container">
-        <BackArrow></BackArrow>
+        <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Back up Restore"></Headingtxt>
 
         <div className="mobile-restore">
@@ -39,7 +45,7 @@ export default function LocalMoblieBackup() {
           </p>
           <div style={{ display: "flex", marginLeft: "-20px" }}>
             {" "}
-            <ToggleBtn></ToggleBtn>
+            <ToggleBtn name="mb_sms_call_history"></ToggleBtn>
           </div>
         </div>
 
@@ -71,7 +77,7 @@ export default function LocalMoblieBackup() {
             style={{ display: "flex", marginLeft: "0px", marginRight: "-35px" }}
           >
             {" "}
-            <ToggleBtn></ToggleBtn>
+            <ToggleBtn name="mb_other_sys_app"></ToggleBtn>
           </div>
         </div>
 
@@ -87,7 +93,7 @@ export default function LocalMoblieBackup() {
               marginRight: "-25px",
             }}
           >
-            Other system app data
+            Third party app data
             <p
               style={{
                 color: "#534d4d",
@@ -103,7 +109,7 @@ export default function LocalMoblieBackup() {
             style={{ display: "flex", marginLeft: "0px", marginRight: "-35px" }}
           >
             {" "}
-            <ToggleBtn></ToggleBtn>
+            <ToggleBtn name="mb_third_party_appdata"></ToggleBtn>
           </div>
         </div>
         <br></br>

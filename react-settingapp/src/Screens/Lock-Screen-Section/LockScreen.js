@@ -13,12 +13,14 @@ export default function LockScreen(){
      const openGlance=()=>{
       navigate('/glance-for-mi')
      }
-
+     const goback=()=>{
+        navigate('/')
+      }
 
     return(
 
         <>
-          <BackArrow></BackArrow>
+          <BackArrow onClick={goback}></BackArrow>
           <Headingtxt headingtxt="Lock screen"></Headingtxt>
            
           <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'20px',fontWeight:'300' , marginLeft:'20px'}}>
@@ -33,7 +35,7 @@ export default function LockScreen(){
              <div style={{marginTop:'10px', display:'flex'}} >
                 <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                     Raise to wake </span>
-                <div style={{marginTop:'20px',display:'flex' , marginLeft:'55px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                <div style={{marginTop:'20px',display:'flex' , marginLeft:'55px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="lockscreen_raiseToWake"></ToggleBtn></div>
               </div>
 
 
@@ -42,14 +44,14 @@ export default function LockScreen(){
                 <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                    You can double tap to turn the screen off when either Default or Classic
                    theme is applied
-                    <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="lockscreen_doubleToWake"></ToggleBtn></div>
                 </p>
              </div>
 
              <div style={{marginTop:'10px', display:'flex'}} >
                 <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550',marginRight:'0px'}}>
                     Wake Lock screen for notifications </span>
-                <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px',marginRight:'35px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px',marginRight:'35px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="lockscreen_wakeTolockScreen"></ToggleBtn></div>
               </div>
 
               <br></br>
@@ -80,7 +82,7 @@ export default function LockScreen(){
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Double press to "Volume down" button to open Camera when the 
                          screen is locked
-                            <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                            <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="lockscreen_launchCamera"></ToggleBtn></div>
                         </p>
                     </div> 
 
@@ -88,7 +90,7 @@ export default function LockScreen(){
                         <span style={{marginRight:'50px'}}>Pocket mode</span> 
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Lock touch gestures when placed in a pocket
-                            <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                            <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="lockscreen_pocketMode"></ToggleBtn></div>
                         </p>
                     </div> 
 

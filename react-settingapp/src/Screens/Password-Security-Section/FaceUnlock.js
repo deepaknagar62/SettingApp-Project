@@ -45,7 +45,7 @@ export default function FaceUnlock() {
                         <span style={{marginRight:'50px'}}>Unlock using face data</span> 
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Unlock device using your face data
-                            <div style={{display:'flex', marginLeft:'-33px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                            <div style={{display:'flex', marginLeft:'-33px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="P&S_unlockUsingFace"></ToggleBtn></div>
                         </p>
                  </div>  
 
@@ -61,7 +61,7 @@ export default function FaceUnlock() {
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Stay on the lock screen after your face is verified.Swipe up to opne the
                          Home screen
-                            <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                            <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="P&S_stayOnScreen"></ToggleBtn></div>
                         </p>
                  </div>  
 
@@ -71,7 +71,7 @@ export default function FaceUnlock() {
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Show only notification source when device is locked and add notification details 
                          after face data is verified
-                            <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                            <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="P&S_showAfterFaceUnlock"> </ToggleBtn></div>
                         </p>
                  </div>  
       

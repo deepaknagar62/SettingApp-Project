@@ -27,7 +27,7 @@ export default function EmergencySOS() {
                 <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                     Rapidly press the Power button 5 times to send SOS text message with your
                     location to your emergency contacts
-                    <div style={{display:'flex', marginLeft:'-33px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'-33px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="Emergency_SOS"></ToggleBtn></div>
                 </p>
             </div>  
 

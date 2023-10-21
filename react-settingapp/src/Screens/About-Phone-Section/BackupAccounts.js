@@ -2,12 +2,19 @@ import React from 'react'
 import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/backupAccounts.css';
 import BackArrow from '../../Components/BackArrow';
+import { useNavigate } from 'react-router-dom';
 
 export default function BackupAccounts() {
+
+  const navigate = useNavigate();
+
+    const goback=()=>{
+      navigate('/backup-restore')
+    }
   return (
     <> 
       <div className='backupAccounts-container'>  
-      <BackArrow></BackArrow>
+      <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Choose backup account"></Headingtxt> 
   
        <div className="choose-account" style={{marginTop:'50px'}}>

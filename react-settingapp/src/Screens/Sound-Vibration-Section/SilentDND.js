@@ -4,11 +4,17 @@ import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/silentDND.css'
 import Line from '../../Components/Line'
 import ToggleBtn from '../../Components/ToggleBtn'
+import { useNavigate } from 'react-router-dom'
 
 export default function SilentDND() {
+  const navigate = useNavigate();
+
+  const goback=()=>{
+    navigate('/sound-vibration')
+  }
   return (
     <>
-       <BackArrow></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Silent/DND"></Headingtxt>
 
        <div className="choose-silent-option" style={{marginTop:'50px'}}>
@@ -41,7 +47,7 @@ export default function SilentDND() {
        <div style={{marginTop:'10px', display:'flex'}} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}>
                  Mute music stream </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px'}}> <ToggleBtn name="silentDND_muteMusicStream"></ToggleBtn></div>
            </div>   
            
 

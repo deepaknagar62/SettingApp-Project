@@ -7,14 +7,19 @@ import battery from '../Images/battrysav.png'
 import ultra from '../Images/ultra.png'
 import graph from '../Images/graph.png'
 import Line from '../../Components/Line';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Battery(){
+    const navigate = useNavigate();
+    const goback=()=>{
+        navigate('/')
+      }
 
     return(
 
         <>
-            <BackArrow></BackArrow>
+            <BackArrow onClick={goback}></BackArrow>
             <Headingtxt headingtxt="Battery saver"></Headingtxt>
 
             <div className="battery-card "> 
@@ -28,11 +33,11 @@ export default function Battery(){
             </div>
 
             <div className="bs-icons">
-                <img src={battery} alt='message'></img>
-                    <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'10px' }}>
-                        Backup
+            <img src={battery} alt='message'></img>
+                    <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'10px',marginRight:'-100px' }}>
+                        Battery saver
                         <p style={{fontSize:'13px',marginTop:'0px',fontWeight:'300' ,marginRight:'-50px'}}> 23h 32m remaining</p> </p>
-                    <div style={{display:'flex', marginLeft:'50px'}}> <ToggleBtn ></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'100px',marginRight:'-40px'}}> <ToggleBtn name="battery_saver"></ToggleBtn></div>
             </div>
 
 
@@ -41,7 +46,7 @@ export default function Battery(){
                     <p style={{ marginTop:'5px', color:'black' , fontWeight:'550' ,fontSize:"20px",marginLeft:'10px',marginRight:'-100px' }}>
                         Ultra saver
                         <p style={{fontSize:'13px',marginTop:'0px',fontWeight:'300' ,marginRight:'-50px'}}> 23h 32m remaining</p> </p>
-                    <div style={{display:'flex', marginLeft:'118px',marginRight:'-40px'}}> <ToggleBtn ></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'123px',marginRight:'-40px'}}> <ToggleBtn name="ultra_saver"></ToggleBtn></div>
             </div>
 
           <br></br>

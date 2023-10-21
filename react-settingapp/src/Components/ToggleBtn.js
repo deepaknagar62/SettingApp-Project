@@ -9,7 +9,7 @@ export default function ToggleBtn({name}){
     useEffect(() => {
       const fetchToggleButtonState = async () => {
         try {
-          const response = await axios.get(`/api/toggle-button/${name}`);
+          const response = await axios.get(`/get-api/toggle-button-status/${name}`);
           setIsToggled(response.data.state);
         } catch (error) {
           console.error('Failed to fetch toggle button state', error);
@@ -17,14 +17,14 @@ export default function ToggleBtn({name}){
       };
   
       fetchToggleButtonState();
-    }, []);
+    }, [name]);
   
     const handleToggle = async () => {
       const newState = !isToggled;
       setIsToggled(newState); 
   
       try {
-        const response = await axios.put(`/api/toggle-button/${name}`, { state: newState });
+        const response = await axios.put(`/put-api/toggle-button-status/${name}`, { state: newState });
         setIsToggled(response.data.state);
       } catch (error) {
         console.error('Failed to update toggle button state', error);

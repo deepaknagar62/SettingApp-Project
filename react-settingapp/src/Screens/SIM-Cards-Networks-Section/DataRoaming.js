@@ -28,7 +28,7 @@ export default function DataRoaming() {
 
       <div style={{marginTop:'20px', display:'flex'}} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> International roaming </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'-10px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'-10px'}}> <ToggleBtn name="dr_internationalRoaming"></ToggleBtn></div>
          </div>
     </>
   );

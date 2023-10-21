@@ -8,17 +8,23 @@ import Lighttext from '../../Components/Lighttext'
 import cast1 from '../Images/casticon.png'
 import cast2 from '../Images/casticon2.png'
 import cast3 from '../Images/casticon3.png'
+import { useNavigate } from 'react-router-dom'
 export default function Casting() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/connection-sharing')
+  }
   return (
     <> 
-       <BackArrow ></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Cast"></Headingtxt>
 
             <div className="casting-container "  >
                 <span >Cast</span> 
                 <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                     Cast screen contents to an external monitor
-                    <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'-40px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="casting_cast"></ToggleBtn></div>
                 </p>
              </div>
 

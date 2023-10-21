@@ -11,6 +11,7 @@ import music from '../Images/music.png'
 import Line from '../../Components/Line'
 import ToggleBtn from '../../Components/ToggleBtn'
 import { useNavigate } from 'react-router-dom'
+import VolumeContainer from '../../Components/VolumeContainer'
 export default function SoundAndVibration(){
     const navigate = useNavigate();
 
@@ -20,11 +21,14 @@ export default function SoundAndVibration(){
     const OpneAdditionals=()=>{
         navigate('/sound-additional-settings')
     }
+    const goback=()=>{
+        navigate('/')
+      }
 
     return(
         <>
           
-          <BackArrow></BackArrow>
+          <BackArrow onClick={goback}></BackArrow>
           <Headingtxt headingtxt="Sound & vibration"></Headingtxt>
 
           <div style={{display:'flex'}}>
@@ -58,22 +62,14 @@ export default function SoundAndVibration(){
            
            <div style={{marginLeft:'20px', marginTop:'20px'}} > 
            <span style={{marginLeft:'10px',fontWeight:'400',fontSize:'18px', display:'flex'}}><img src={bell} alt="alarm" width='25' height='22'></img>  <span style={{marginLeft:'5px'}}>Calls, reminders, notifications</span> </span> 
-           <div class="volume-container">
-            <div class="volume-bar" id="volume-bar">
-                <div class="volume-fill" id="volume-fill" style={{width:'50%'}}></div>
-            </div>
-            </div>
+               <VolumeContainer name="calls_reminders_notifications"/>
             </div>
 
         <div style={{marginLeft:'20px', marginTop:'20px'}} > 
            <span style={{marginLeft:'10px',fontWeight:'400',fontSize:'18px', display:'flex'}}>
             <img src={alarm2} alt="alarm" width='20' height='20'></img>  
             <span style={{marginLeft:'8px'}}>Alarm volume</span> </span> 
-           <div class="volume-container">
-            <div class="volume-bar" id="volume-bar">
-                <div class="volume-fill" id="volume-fill" style={{width:'90%'}}></div>
-            </div>
-            </div>
+            <VolumeContainer name="alarm_volume"/>
         </div>
 
 
@@ -81,11 +77,7 @@ export default function SoundAndVibration(){
            <span style={{marginLeft:'10px',fontWeight:'400',fontSize:'18px', display:'flex'}}>
             <img src={music} alt="alarm" width='20' height='20'></img>  
             <span style={{marginLeft:'8px'}}>Music, games, media</span> </span> 
-           <div class="volume-container">
-            <div class="volume-bar" id="volume-bar">
-                <div class="volume-fill" id="volume-fill" style={{width:'70%'}}></div>
-            </div>
-            </div>
+            <VolumeContainer name="music_games_media"/>
         </div>
 
         <br></br>
@@ -97,14 +89,14 @@ export default function SoundAndVibration(){
             <div style={{marginTop:'10px', display:'flex'}} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}>
                  Vibrate for calls </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'20px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'20px'}}> <ToggleBtn name="S&V_vibrateForCalls"></ToggleBtn></div>
            </div>   
 
 
             <div style={{marginTop:'10px', display:'flex'}} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}>
                  Vibrate in silent mode </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'-37px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'-37px'}}> <ToggleBtn name="S&V_vibrateInSilent"></ToggleBtn></div>
            </div>    
 
            <br></br>

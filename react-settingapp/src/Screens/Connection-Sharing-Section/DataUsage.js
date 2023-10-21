@@ -11,11 +11,17 @@ import paytm from '../Images/paytm.png'
 import music from '../Images/print.png'
 import contact from '../Images/chrome.png'
 import '../CSS/datausage.css'
+import { useNavigate } from 'react-router-dom'
 export default function DataUsage() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/connection-sharing')
+  }
   return (
     <>
 
-       <BackArrow></BackArrow>
+       <BackArrow  onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Data usage"></Headingtxt>
 
             <div className="datausage-icons" >

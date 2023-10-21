@@ -3,15 +3,24 @@ import Headingtxt from '../../Components/Headingtxt'
 import ToggleBtn from '../../Components/ToggleBtn'
 import '../CSS/googlebackup.css'
 import BackArrow from '../../Components/BackArrow'
+import { useNavigate } from 'react-router-dom'
 export default function GoogleBackupMyData() {
+
+  const navigate = useNavigate();
+
+    const goback=()=>{
+      navigate('/backup-restore')
+    }
+
+
   return (
     <>  
        <div className='googlebackup-container'>  
-       <BackArrow></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Back up my data"></Headingtxt>
        <div style={{display:'flex' , marginTop:'20px' , alignItems:'center'}}>
          <h2 style={{marginLeft:'20px' ,marginTop:'20px' , fontWeight:'400'}}>Turn on backups</h2>
-         <ToggleBtn style={{marginRight:'-20px' }}></ToggleBtn>
+         <ToggleBtn name='bkmd_turnOnBackups'></ToggleBtn>
        </div>
 
        <div style={{marginLeft:'20px' ,marginRight:'20px' , fontWeight:'300'}}>

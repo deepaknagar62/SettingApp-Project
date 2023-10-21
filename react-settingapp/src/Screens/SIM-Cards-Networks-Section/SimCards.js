@@ -16,14 +16,22 @@ export default function SimCards() {
  const OpenSimSettings=()=>{
   navigate('/simcard-settings')
  }
+ const OpenSimSettings2=()=>{
+  navigate('/simcard-settings2')
+ }
+
 
  const OpenDataroaming=()=>{
   navigate('/data-roaming');
  }
 
+ const goback=()=>{
+  navigate('/');
+ }
+
   return (
     <>
-      <BackArrow on></BackArrow>
+      <BackArrow onClick={goback}></BackArrow>
       <Headingtxt headingtxt="SIM & mobile networks"></Headingtxt>
       <div style={{ display: "flex" }}>
         <div className="sim-cards" onClick={OpenSimSettings}>
@@ -36,7 +44,7 @@ export default function SimCards() {
           </p>
         </div>
 
-        <div className="sim-cards" onClick={OpenSimSettings}>
+        <div className="sim-cards" onClick={OpenSimSettings2}>
 
         <img src={sim2} alt="icon" width="35" height="35"></img>
           <p style={{ color: "#534d4d", fontSize: "18px",marginTop:'2px',fontWeight: "500" }}>
@@ -68,7 +76,7 @@ export default function SimCards() {
             <span style={{fontSize:"20px",fontWeight:'600'}}>Mobile data</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'-30px' }}>
                  Allow this device to use mobile data
-                 <div style={{display:'flex', marginLeft:'-45px',marginTop:'-10px'}}> <ToggleBtn ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-45px',marginTop:'-10px'}}> <ToggleBtn name="simnet_mobileData"></ToggleBtn></div>
             </p>
            </div>
 
@@ -76,7 +84,7 @@ export default function SimCards() {
             <span style={{fontSize:"20px" ,fontWeight:'600'}}>Dual 4G</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'-20px' }}>
                  Allow 4G connectivity for both SIM
-                 <div style={{display:'flex', marginLeft:'-35px',marginTop:'-10px'}}> <ToggleBtn ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-35px',marginTop:'-10px'}}> <ToggleBtn name="simnet_dual4G" ></ToggleBtn></div>
             </p>
            </div>
 
@@ -85,7 +93,7 @@ export default function SimCards() {
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'0px' }}>
                  During VoLTE calls, device will connect to a mobile data network using the
                  secondary SIM
-                 <div style={{display:'flex', marginLeft:'-10px',marginRight:'10px',marginTop:'-5px'}}> <ToggleBtn ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-10px',marginRight:'10px',marginTop:'-5px'}}> <ToggleBtn name="simnet_useMobileCalls"></ToggleBtn></div>
             </p>
            </div>
 
@@ -101,18 +109,18 @@ export default function SimCards() {
             <span style={{fontSize:"20px" ,fontWeight:'600'}}>Always receive MMS</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'10px' }}>
                  Receive MMS even when mobile data is off
-                 <div style={{display:'flex', marginLeft:'-45px',marginTop:'-10px'}}> <ToggleBtn ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-45px',marginTop:'-10px'}}> <ToggleBtn name="simnet_receiveMMS"></ToggleBtn></div>
             </p>
            </div>
            <br></br>
            <br></br>
            <Line></Line>
 
-           <div className="net-settings " style={{marginTop:'30px'}}>
+           <div className="net-settings " style={{marginTop:'30px',marginBottom:'30px'}}>
             <span style={{fontSize:"19px" ,fontWeight:'600'}}>Remember SIM prefrences</span> 
             <p style={{display:'flex', justifyItems:'center' ,fontSize:'15px',marginRight:'10px' }}>
                  use a SIM card that was used during the previous call with this contact
-                 <div style={{display:'flex', marginLeft:'-95px',marginTop:'-10px'}}> <ToggleBtn ></ToggleBtn></div>
+                 <div style={{display:'flex', marginLeft:'-95px',marginTop:'-10px'}}> <ToggleBtn name="simnet_rememberSim"></ToggleBtn></div>
             </p>
            </div>
     </>

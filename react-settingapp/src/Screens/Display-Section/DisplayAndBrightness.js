@@ -32,11 +32,14 @@ export default function DisplayAndBrightness(){
     const openFullscreenMode=()=>{
         navigate('/fullscreen-mode');
     }
+    const goback=()=>{
+        navigate('/')
+      }
 
     return(
 
         <>
-           <BackArrow></BackArrow>
+           <BackArrow onClick={goback}></BackArrow>
            <Headingtxt headingtxt="Display and Brightness"></Headingtxt>
            <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'25px',fontWeight:'300' , marginLeft:'25px'}}>
             <span >SCREEN</span></div> 
@@ -97,7 +100,7 @@ export default function DisplayAndBrightness(){
            <div style={{marginTop:'10px', display:'flex'}} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                  Auto-rotate screen </span>
-             <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px'}}> <ToggleBtn ></ToggleBtn></div>
+             <div style={{marginTop:'20px',display:'flex' , marginLeft:'0px'}}> <ToggleBtn name="D&B_autoRotateScreen"></ToggleBtn></div>
            </div>  
         </>
     );

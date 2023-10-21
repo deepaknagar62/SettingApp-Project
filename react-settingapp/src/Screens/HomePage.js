@@ -13,6 +13,7 @@ import passwordicon from './Images/fingerprint.png';
 import { useNavigate } from 'react-router-dom';
 import Line from '../Components/Line';
 
+ 
 
 
 
@@ -153,7 +154,7 @@ export default function HomePage(){
             </div>
 
 
-             
+            
 
             </div>
 

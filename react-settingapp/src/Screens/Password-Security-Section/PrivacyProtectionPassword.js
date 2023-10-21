@@ -27,7 +27,7 @@ export default function PrivacyProtectionPassword() {
                 <span style={{marginRight:'50px'}}>Privacy protection password</span> 
                 <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                     Require password for every time private items are accessed
-                    <div style={{display:'flex', marginLeft:'-33px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'-30px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="ppp_privacyProtection"></ToggleBtn></div>
                 </p>
             </div>  
 
@@ -35,7 +35,7 @@ export default function PrivacyProtectionPassword() {
             <div style={{marginTop:'10px', display:'flex'}} >
             <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                 Show pattern </span>
-            <div style={{marginTop:'20px',display:'flex' , marginLeft:'55px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+            <div style={{marginTop:'20px',display:'flex' , marginLeft:'59px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn  name="ppp_showPattern"></ToggleBtn></div>
             </div>  
 
 
@@ -44,7 +44,7 @@ export default function PrivacyProtectionPassword() {
                 <span style={{marginRight:'50px'}}>Add Mi Account</span> 
                 <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                     Use Mi Account to reset your password
-                    <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn></ToggleBtn></div>
+                    <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn  name="ppp_addMI"></ToggleBtn></div>
                 </p>
             </div> 
 

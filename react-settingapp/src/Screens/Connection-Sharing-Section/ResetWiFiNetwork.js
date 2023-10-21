@@ -4,11 +4,17 @@ import Headingtxt from '../../Components/Headingtxt'
 import Line from '../../Components/Line'
 import reseticon from '../Images/resetimg.png';
 import '../CSS/resetWifiNetwork.css'
+import { useNavigate } from 'react-router-dom';
 export default function ResetWiFiNetwork() {
+
+  const navigate = useNavigate();
+  const goback=()=>{
+    navigate('/connection-sharing')
+  }
   return (
     <>
 
-       <BackArrow></BackArrow>
+       <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Reset Wi-Fi, mobile networks, and Bluetooth"></Headingtxt>
         
        <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'40px',fontWeight:'300' , marginLeft:'20px'}}>
