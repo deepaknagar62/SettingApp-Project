@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../CSS/backupRestore.css';
 import Line from '../../Components/Line';
 import ToggleBtn from '../../Components/ToggleBtn';
 import Headingtxt from '../../Components/Headingtxt';
 import { useNavigate } from 'react-router-dom';
 import BackArrow from '../../Components/BackArrow';
+import axios from 'axios';
 
 export default function BackupAndRestore(){
    
@@ -25,6 +26,20 @@ export default function BackupAndRestore(){
   const Goback=()=>{
     navigate('/about-phone');
   }
+
+
+  const [selectedAccount, setSelectedAccount] = useState("nagardeepak9098@gmail.com");
+
+    useEffect(() => {
+      axios.get('/api/choose-backup-accounts')
+        .then(response => {
+          setSelectedAccount(response.data.selectedCard);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
 
     return(
 
@@ -70,8 +85,8 @@ export default function BackupAndRestore(){
       <div className="cloud" style={{marginTop:'30px'}} onClick={OpenBackupAccounts}>
             
         <span style={{fontWeight:'550' ,fontSize:"20px"}}>Backup account</span> 
-        <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px'}}> nagardeepak9098@gmail.com
-        <p style={{marginLeft:'110px' , fontSize:'25px', marginTop:'-15px' }}>&#62;</p></p>
+        <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px'}}> {selectedAccount}
+        <p style={{marginLeft:'295px',position:'fixed' , fontSize:'25px', marginTop:'-15px' }}>&#62;</p></p>
 
       </div>
 

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
 import '../CSS/silentDND.css'
 import Line from '../../Components/Line'
 import ToggleBtn from '../../Components/ToggleBtn'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 export default function SilentDND() {
   const navigate = useNavigate();
@@ -12,33 +13,69 @@ export default function SilentDND() {
   const goback=()=>{
     navigate('/sound-vibration')
   }
+
+
+  const [selectedCard, setSelectedCard] = useState(null);
+
+  useEffect(() => {
+    axios.get('/api/silent-DND')
+      .then(response => {
+        setSelectedCard(response.data.selectedCard);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  const onCardClick = (cardName) => {
+    setSelectedCard(cardName);
+
+    
+    axios.put('/api/silent-DND', { selectedCard: cardName })
+      .then(response => {
+        console.log('Selected card updated:', response.data.selectedCard);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  const cardOptions = [
+    {
+      name: 'Regular',
+      description: 'All sounds will work normally',
+    },
+    {
+      name: 'Silent',
+      description: 'Calls and notifications will be silenced',
+    },
+    {
+      name: 'DND',
+      description: 'Silence sounds and turn off vibration except for alarms',
+    },
+  ];
+
   return (
     <>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Silent/DND"></Headingtxt>
 
-       <div className="choose-silent-option" style={{marginTop:'50px'}}>
-         <div style={{marginLeft:'30px'}}>
-            <span style={{fontSize:'20px', fontWeight:'500'}}>Regular</span>
-            <p style={{fontSize:'15px', fontWeight:'250', marginTop:'0px'}}> All sounds will work normally</p>
-         </div>
-       </div>
+       <div style={{marginTop:'40px'}}>
+       {cardOptions.map(card => (
+            <div
+              key={card.name}
+              className={`choose-silent-option ${selectedCard === card.name ? 'selected' : ''}`}
+              onClick={() => onCardClick(card.name)}
+            >
+              <div style={{ marginLeft: '30px' }}>
+                <span style={{ fontSize: '20px', fontWeight: '500' }}>{card.name}</span>
+                <p style={{ fontSize: '15px', fontWeight: '250', marginTop: '0px' }}>{card.description}</p>
+              </div>
+            </div>
+      ))}
+        </div>
+    
        
-       <div className="choose-silent-option">
-       <div style={{marginLeft:'30px'}}>
-            <span style={{fontSize:'20px', fontWeight:'500'}}>Silent</span>
-            <p style={{fontSize:'15px', fontWeight:'250', marginTop:'0px'}}> 
-            Calls and notifications will be silenced</p>
-         </div>
-       </div>
-
-       <div className="choose-silent-option">
-       <div style={{marginLeft:'30px'}}>
-            <span style={{fontSize:'20px', fontWeight:'500'}}>DND</span>
-            <p style={{fontSize:'15px', fontWeight:'250', marginTop:'0px'}}> 
-            Silence sounds and turn off vibration except for alarms</p>
-         </div>
-       </div>
 
        <br></br>
        <Line></Line>

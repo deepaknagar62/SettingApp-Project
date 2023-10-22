@@ -84,6 +84,74 @@ app.put('/put-api/volume-container', async (req, res) => {
 
 
 
+
+
+
+
+
+const SelectedCardSchema = new mongoose.Schema({
+  name:String,
+  selectedCard: String,
+});
+
+const SelectedCard = mongoose.model('optionsselections', SelectedCardSchema);
+
+app.get('/api/choose-backup-accounts', async (req, res) => {
+  try {
+    const selectedCard = await SelectedCard.findOne({name:'choose_backup_account'});
+    res.json(selectedCard);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+app.put('/api/choose-backup-accounts', async (req, res) => {
+  try {
+    const { selectedCard } = req.body;
+    const updatedCard = await SelectedCard.findOneAndUpdate({name:'choose_backup_account'}, { selectedCard }, { new: true, upsert: true });
+    res.json(updatedCard);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
+
+app.get('/api/silent-DND', async (req, res) => {
+  try {
+    const selectedCard = await SelectedCard.findOne({name:'choose_silent_DND'});
+    res.json(selectedCard);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+app.put('/api/silent-DND', async (req, res) => {
+  try {
+    const { selectedCard } = req.body;
+    const updatedCard = await SelectedCard.findOneAndUpdate({name:'choose_silent_DND'}, { selectedCard }, { new: true, upsert: true });
+    res.json(updatedCard);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  }
+});
+
+
+
+
+
+
+
+
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

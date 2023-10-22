@@ -12,3 +12,9 @@
     
 
 }
+.selected {
+    border: 5px solid rgb(54, 137, 247);
+    font-size: 19px;
+    color: rgb(3, 101, 228);;
+    
+  }
