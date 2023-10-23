@@ -16,6 +16,13 @@ export default function SimcardSettings() {
         navigate('/mobile-networks')
     }
 
+    const opneSimName=()=>{
+        navigate('/edit-sim-name1')
+    }
+    const opneSimNumber=()=>{
+        navigate('/edit-sim-number1')
+    }
+
     const goback=()=>{
         navigate('/simcards-network')
     }
@@ -37,12 +44,12 @@ export default function SimcardSettings() {
             <span >EDIT SIM INFO</span></div> 
 
 
-         <div className='sim-net-container' >
+         <div className='sim-net-container' onClick={opneSimName} >
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Edit SIM card name </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'120px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
          </div>  
 
-         <div className='sim-net-container' >
+         <div className='sim-net-container' onClick={opneSimNumber}>
              <span style={{marginLeft:'20px',marginTop:'20px' ,fontSize:'20px',fontWeight:'600'}}> Edit SIM card number </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'100px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
          </div>  

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../CSS/simCardsNetwork.css";
 import Headingtxt from "../../Components/Headingtxt";
 import BackArrow from "../../Components/BackArrow";
@@ -8,6 +8,7 @@ import bothicon from "../Images/both.png"
 import ToggleBtn from "../../Components/ToggleBtn";
 import Line from "../../Components/Line";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 
 export default function SimCards() {
@@ -29,6 +30,145 @@ export default function SimCards() {
   navigate('/');
  }
 
+
+
+
+
+ const [selectedCard, setSelectedCard] = useState(null);
+
+
+  useEffect(() => {
+    axios.get('/api/default-sim-for-calls')
+      .then(response => {
+        setSelectedCard(response.data.selectedCard,);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  const onOptionClick = (optionName) => {
+    setSelectedCard(optionName);
+
+    
+    axios.put('/api/default-sim-for-calls', { selectedCard: optionName })
+      .then(response => {
+        console.log('Selected option updated:', response.data.selectedCard);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  const optionImages = [
+    { name: 'sim1', iconSrc: sim1 },
+    { name: 'sim2', iconSrc: sim2 },
+    { name: 'both', iconSrc: bothicon },
+  ];
+
+
+
+
+
+  const [selectedCard2, setSelectedCard2] = useState(null);
+
+  useEffect(() => {
+    axios.get('/api/default-sim-for-data')
+      .then(response => {
+        setSelectedCard2(response.data.selectedCard,);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  const onOptionClick2 = (optionName) => {
+    setSelectedCard2(optionName);
+
+    
+    axios.put('/api/default-sim-for-data', { selectedCard: optionName })
+      .then(response => {
+        console.log('Selected option updated:', response.data.selectedCard);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  const optionImages2 = [
+    { name: 'sim1', iconSrc: sim1 },
+    { name: 'sim2', iconSrc: sim2 },
+    
+  ];
+
+
+
+
+  const [sim1_name, setText] = useState('');
+
+    
+    useEffect(() => {
+      axios.get('/api/sim1-name')
+        .then(response => {
+          setText(response.data.enteredText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
+   
+    const [sim1_number, setNumber] = useState('');
+
+    
+    useEffect(() => {
+      axios.get('/api/sim1-number')
+        .then(response => {
+          setNumber(response.data.enteredText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
+  
+
+
+
+
+    const [sim2_name, setSim2Name] = useState('');
+
+    
+    useEffect(() => {
+      axios.get('/api/sim2-name')
+        .then(response => {
+          setSim2Name(response.data.enteredText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
+   
+    const [sim2_number, setSim2Number] = useState('');
+
+    
+    useEffect(() => {
+      axios.get('/api/sim2-number')
+        .then(response => {
+          setSim2Number(response.data.enteredText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+
+
+
+
+
+
+
   return (
     <>
       <BackArrow onClick={goback}></BackArrow>
@@ -37,9 +177,9 @@ export default function SimCards() {
         <div className="sim-cards" onClick={OpenSimSettings}>
           <img src={sim1} alt="icon" width="35" height="35"></img>
           <p style={{ color: "#534d4d", fontSize: "18px",marginTop:'2px',fontWeight: "500" }}>
-            Jio
+            {sim1_name}
             <p style={{ marginTop: "-4px", color: "black", fontWeight: "300", fontSize: "12px" }}>
-              6261877594 <span style={{fontSize:'15px'}}>&#62;</span>
+              {sim1_number} <span style={{fontSize:'15px'}}>&#62;</span>
             </p>
           </p>
         </div>
@@ -48,27 +188,46 @@ export default function SimCards() {
 
         <img src={sim2} alt="icon" width="35" height="35"></img>
           <p style={{ color: "#534d4d", fontSize: "18px",marginTop:'2px',fontWeight: "500" }}>
-            Airtel
+            {sim2_name}
             <p style={{ marginTop: "-4px", color: "black", fontWeight: "300", fontSize: "12px" }}>
-              9977380998 <span style={{fontSize:'15px'}}>&#62;</span>
+              {sim2_number} <span style={{fontSize:'15px'}}>&#62;</span>
             </p>
           </p>
         </div>
       </div>
 
         <div style={{marginLeft:'25px', marginTop:'35px', fontWeight:'600' , fontSize:'18px'}}><span>Default for calls</span></div>
-          <div className="options-container">
-             <div className="options"> <img src={sim1} alt="icon" width="35" height="35"></img> </div>
-             <div className="options"> <img src={sim2} alt="icon" width="35" height="35"></img> </div>
-             <div className="options"> <img src={bothicon} alt="icon" width="35" height="35"></img> </div>
+
+        <div className="options-container">
+        {optionImages.map(option => (
+          <div
+            key={option.name}
+            className={`options ${selectedCard === option.name ? 'selected' : ''}`}
+            onClick={() => onOptionClick(option.name)}
+          >
+            <img src={option.iconSrc} alt="icon" width="35" height="35" />
           </div>
+          ))}
+       </div>
+
+          
 
           <div style={{marginLeft:'25px', marginTop:'35px', fontSize:'18px',fontWeight:'600'}}><span>Data card</span></div>
+          
+          
           <div className="options-container">
-             <div className="options" style={{marginLeft:'10px',width:'40%'}}> <img src={sim1} alt="icon" width="35" height="35"></img> </div>
-             <div className="options" style={{marginLeft:'30px',width:'40%'}}> <img src={sim2} alt="icon" width="35" height="35"></img> </div>
-
+        {optionImages2.map(option => (
+          <div style={{marginLeft:'50px',width:'80px'}}
+            key={option.name}
+            className={`options ${selectedCard2 === option.name ? 'selected' : ''}`}
+            onClick={() => onOptionClick2(option.name)}
+          >
+            <img src={option.iconSrc} alt="icon" width="35" height="35"  />
           </div>
+          ))}
+       </div>
+          
+          
 
           <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'40px',fontWeight:'300' , marginLeft:'20px'}}><span >SETTINGS</span></div>
          

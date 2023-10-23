@@ -39,16 +39,24 @@
 .options{
   
   border-radius: 10px;
-  width: 30%;
+  width: 20%;
   max-width: 300px;
-  height: 35px;
+  height: 30px;
   margin-top: -10px;
-  margin-left: 10px;
+  margin-left: 25px;
   display: inline-flex;
   
   justify-content: center;
 }
 
+.selected {
+  border: 5px solid rgb(54, 137, 247);
+  color: rgb(54, 137, 247);;
+  height: 30px;
+  margin-top: -20px;
+  margin-left: 25px;
+  
+}
 
 .net-settings {
   display: block;

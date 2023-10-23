@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../CSS/aboutPhone.css'
 import versionicon from '../Images/deviceicon.jpg'
 import { useNavigate } from 'react-router-dom';
 import Line from '../../Components/Line';
 import BackArrow from '../../Components/BackArrow';
 import Headingtxt from '../../Components/Headingtxt';
+import axios from 'axios';
+
 
 
 export default function AboutPhone(){
@@ -22,10 +24,28 @@ export default function AboutPhone(){
     const OpenFactoryReset=()=>{
         navigate('/factory-reset');
     }
+    const opnedeviceName=()=>{
+        navigate('/device-name');
+    }
 
     const Goback=()=>{
       navigate('/');
     }
+
+    const [device_name, setDeviceName] = useState('Redmi 8A');
+
+    
+    useEffect(() => {
+      axios.get('/api/device-name')
+        .then(response => {
+            setDeviceName(response.data.enteredText);
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }, []);
+  
+   
 
     return(
 
@@ -40,10 +60,10 @@ export default function AboutPhone(){
                     <div className="text1">Device Version</div>
                     <p> MIUI Global<p className='text4'>12.5.2 <p className='text4'>stable</p></p></p>
                 </div>
-            <div style={{display : 'inline'}}> 
-                <div className="card21">
+            <div style={{display : 'inline'}} > 
+                <div className="card21" onClick={opnedeviceName}>
                     <div className="text1">Device Name</div>
-                    <p className='text2'>Redmi 8A</p>
+                    <p className='text2'>{device_name}</p>
                 </div>
             <div className="card31">
                 <div className="text1">Storage</div>

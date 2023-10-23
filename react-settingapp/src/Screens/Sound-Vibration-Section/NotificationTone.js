@@ -1,22 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
-import '../CSS/silentDND.css'
-import '../CSS/systemFont.css'
 import { useNavigate } from 'react-router-dom';
-import Line from '../../Components/Line';
-import axios from 'axios'
-export default function SystemFont() {
-  const navigate = useNavigate();
-  const goback=()=>{
-    navigate('/display')
+import axios from 'axios';
+import '../CSS/notificationTone.css'
+
+export default function NotificationTone() {
+
+   const navigate = useNavigate();
+
+   const goback=()=>{
+    navigate('/sound-vibration')
   }
 
-  const [selectedCard, setSelectedCard] = useState("itelic");
+
+  const [selectedCard, setSelectedCard] = useState(null);
 
     
   useEffect(() => {
-    axios.get('/api/choose-font')
+    axios.get('/api/choose-notification-ring')
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -29,7 +31,7 @@ export default function SystemFont() {
     setSelectedCard(cardName);
 
    
-    axios.put('/api/choose-font', { selectedCard: cardName })
+    axios.put('/api/choose-notification-ring', { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })
@@ -39,49 +41,37 @@ export default function SystemFont() {
   };
 
   const cardNames = [
-    'normal',
-    'italic',   
-    'monospace',
-    'fantasy',
-    'revert-layer ',
-    'cursive',
-    
+    'Bottle',
+    'Brust',
+    'Crystal',   
+    'Frog',
+    'Fade out',
+    'Harp ',
+    'Moment',
+    'Potion',
+    'Radar',
+    'Swoosh',
+    'Spring',
   ];
-
-
-   const txt = selectedCard;
-
+  
 
   return (
     <>
          <BackArrow onClick={goback}></BackArrow>
-         <Headingtxt headingtxt="System font"></Headingtxt>  
-
-         <p style={{marginTop:'40px', fontWeight:'400', textAlign:'center',fontSize:'28px' ,fontFamily:`${txt}`,fontStyle: `${txt}`}} > This is Exmaple text</p>
-         <br></br>
-         <Line></Line>
+          <Headingtxt headingtxt="Notification Ring"></Headingtxt>
 
 
-
-         <div style={{marginTop:'50px'}}>
+          <div style={{marginTop:'50px'}}>
           {cardNames.map((cardName) => (
             <div
               key={cardName}
-              className={`system-font-option ${selectedCard === cardName ? 'selected' : ''}`}
+              className={`choose-notif-ring ${selectedCard === cardName ? 'selected' : ''}`}
               onClick={() => handleCardClick(cardName)}
             >
               <p style={{fontSize:'20px', fontWeight:'400',marginLeft:'30px',marginTop:'0px' }}>{cardName}</p>
             </div>
           ))}
         </div>
-
-
-
-
-
-
-
-
     </>
   )
 }

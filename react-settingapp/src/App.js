@@ -49,6 +49,13 @@ import MobileNeotworks from './Screens/SIM-Cards-Networks-Section/MobileNeotwork
 import SimcardSettings2 from './Screens/SIM-Cards-Networks-Section/SimcardSettings2';
 import MobileNetworks2 from './Screens/SIM-Cards-Networks-Section/MobileNetworks2';
 import PreferredNetwork2 from './Screens/SIM-Cards-Networks-Section/PreferredNetwork2';
+import EditSimName1 from './Screens/SIM-Cards-Networks-Section/EditSimName1';
+import EditSimNumber1 from './Screens/SIM-Cards-Networks-Section/EditSimNumber1';
+import EditSimName2 from './Screens/SIM-Cards-Networks-Section/EditSimName2';
+import EditSimNumber2 from './Screens/SIM-Cards-Networks-Section/EditSimNumber2';
+import DeviceName from './Screens/About-Phone-Section/DeviceName';
+import Ringtone from './Screens/Sound-Vibration-Section/Ringtone';
+import NotificationTone from './Screens/Sound-Vibration-Section/NotificationTone';
 
 
 
@@ -70,7 +77,7 @@ function App() {
           <Route path="/password-security" element={<PasswordAndSecurity/>} />
 
 
-
+          <Route path="/device-name" element={<DeviceName/>} /> 
           <Route path="/all-specs" element={<AllSpecs/>} />
           <Route path="/backup-restore" element={<BackupAndRestore/>}/>
           <Route path="/factory-reset" element={<FactoryReset/>}></Route>
@@ -87,11 +94,19 @@ function App() {
           <Route path='/preferred-network2' element={<PreferredNetwork2/>}></Route>
           <Route path='/mobile-networks' element={<MobileNeotworks/>}></Route>
           <Route path='/mobile-networks2' element={<MobileNetworks2/>}></Route>
+          <Route path='/edit-sim-name1' element={<EditSimName1/>}></Route>
+          <Route path='/edit-sim-number1' element={<EditSimNumber1/>}></Route>
+          <Route path='/edit-sim-name2' element={<EditSimName2/>}></Route>
+          <Route path='/edit-sim-number2' element={<EditSimNumber2/>}></Route>
 
           
           <Route path='/silent-dnd' element={<SilentDND/>}></Route>
           <Route path='/sound-additional-settings' element={<SoundAdditionalSet/>}></Route>
-          
+          <Route path='/choose-ringtone' element={<Ringtone/>}></Route>
+          <Route path='/choose-notification-ring' element={<NotificationTone/>}></Route>
+
+
+
 
           <Route path='/brightness-level' element={<BrightnessLevel/>}></Route>
           <Route path='/reading-mode' element={<ReadingMode/>}></Route>
