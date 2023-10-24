@@ -25,3 +25,24 @@
     vertical-align: middle;
     height: 20px;
 }
+
+
+
+@media screen and (min-width: 1024px) {
+    
+    .reset-wifi-bluetooth-container{
+        width: 30%;
+        height: 60%;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        border-radius: 20px;
+        
+        transform: translate(-50%, -50%);
+    }
+
+    .reset-footer{
+        position: relative;
+        margin-top: 130px;
+    }
+}

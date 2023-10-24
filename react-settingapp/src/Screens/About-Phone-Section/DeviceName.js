@@ -6,7 +6,7 @@ import '../CSS/deviceName.css'
 import axios from 'axios';
 
 export default function DeviceName() {
-
+    const deviceName = 'device-name'
     const navigate = useNavigate();
     const goback=()=>{
         navigate('/about-phone');
@@ -17,7 +17,7 @@ export default function DeviceName() {
 
     
     useEffect(() => {
-      axios.get('/api/device-name')
+      axios.get(`/api/text-data/${deviceName}`)
         .then(response => {
           setText(response.data.enteredText);
         })
@@ -28,7 +28,7 @@ export default function DeviceName() {
   
     const handleSaveClick = () => {
      
-      axios.put('/api/device-name', { enteredText: text })
+      axios.put(`/api/text-data/${deviceName}`, { enteredText: text })
         .then(response => {
           console.log('Entered text updated:', response.data.enteredText);
         })
@@ -43,7 +43,7 @@ export default function DeviceName() {
 
   return (
     <>
-
+       <div className='device-name-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Rename device"></Headingtxt>
   
@@ -52,6 +52,8 @@ export default function DeviceName() {
         <input type="text" value={text} placeholder="Enter sim name" onChange={(e) => setText(e.target.value)} id="editText" />
         <button onClick={handleSaveClick} id="saveButton">Save</button>
       </div>
+      </div>
+
       
     </>
   )

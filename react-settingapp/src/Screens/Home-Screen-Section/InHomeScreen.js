@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
 import card1 from '../Images/card1.png'
@@ -7,24 +7,71 @@ import Line from '../../Components/Line';
 import '../CSS/InHomeScreen.css'
 import ToggleBtn from '../../Components/ToggleBtn'
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 export default function InHomeScreen() {
-
+  const apiName = 'choose-homescreen-type'
   const navigate = useNavigate();
   const goback=()=>{
     navigate('/home-screen')
   }
+
+
+   
+ const [selectedCard, setSelectedCard] = useState(null);
+
+
+ useEffect(() => {
+   axios.get(`/api/${apiName}`)
+     .then(response => {
+       setSelectedCard(response.data.selectedCard,);
+     })
+     .catch(error => {
+       console.error(error);
+     });
+ }, []);
+
+ const onOptionClick = (optionName) => {
+   setSelectedCard(optionName);
+
+   
+   axios.put(`/api/${apiName}`, { selectedCard: optionName })
+     .then(response => {
+       console.log('Selected option updated:', response.data.selectedCard);
+     })
+     .catch(error => {
+       console.error(error);
+     });
+ };
+
+ const optionImages = [
+   { name: 'Classic', iconSrc: card1 },
+   { name: 'With App drawer', iconSrc: card2 },
+   
+ ];
   return (
     <>
 
         <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Home screen"></Headingtxt>
-        
-        <div style={{display:'flex'}}>  
-        <div className="inhome-card "> 
-          <img src={card1} alt="card1" width='100%' height='100%'></img>
+
+
+
+
+        <div style={{marginTop:'40px',display:'flex'}}>
+        {optionImages.map(option => (
+          <div
+            key={option.name}
+            className={`inhome-card ${selectedCard === option.name ? 'selected' : ''}`}
+            onClick={() => onOptionClick(option.name)}
+          >
+            <img src={option.iconSrc} alt="icon" width="100%" height="100%" />
+          </div>
+          ))}
         </div>
-        <div className="inhome-card "> <img src={card2} alt="card1" width='100%' height='100%'></img></div>
-        </div> 
+
+
+
+      
          <div style={{marginLeft:"55px", marginTop:'10px',fontSize:'18px',fontWeight:'500',display:'flex'}}> Classic
          <p style={{marginLeft:"110px", marginTop:'0px',fontSize:'18px',fontWeight:'500'}}> With App drawer </p></div>
           

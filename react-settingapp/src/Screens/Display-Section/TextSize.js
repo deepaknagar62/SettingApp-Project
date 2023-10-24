@@ -7,7 +7,7 @@ import Line from '../../Components/Line';
 import axios from 'axios';
 
 export default function TextSize() {
-
+  const apiName = "choose-text"
   const navigate = useNavigate();
   const goback=()=>{
     navigate('/display')
@@ -18,7 +18,7 @@ export default function TextSize() {
 
     
   useEffect(() => {
-    axios.get('/api/choose-text')
+    axios.get(`/api/${apiName}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -31,7 +31,7 @@ export default function TextSize() {
     setSelectedCard(cardName);
 
    
-    axios.put('/api/choose-text', { selectedCard: cardName })
+    axios.put(`/api/${apiName}`, { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })

@@ -13,7 +13,7 @@ export default function ResetWiFiNetwork() {
   }
   return (
     <>
-
+       <div className='reset-wifi-bluetooth-container'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Reset Wi-Fi, mobile networks, and Bluetooth"></Headingtxt>
         
@@ -27,12 +27,15 @@ export default function ResetWiFiNetwork() {
 
         <br></br>
         <Line></Line>
+        
 
         <footer class="reset-footer">
         <img src={reseticon} alt="reset"/>
         <p>Reset settings</p>
         
         </footer>
+        </div>
+       
     </>
   )
 }

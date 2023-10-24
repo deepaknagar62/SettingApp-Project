@@ -8,7 +8,7 @@ import axios from 'axios';
 export default function Ringtone() {
 
 const navigate = useNavigate();
-
+   const apiName = 'choose-ringtone'
    const goback=()=>{
     navigate('/sound-vibration')
   }
@@ -18,7 +18,7 @@ const navigate = useNavigate();
 
     
   useEffect(() => {
-    axios.get('/api/choose-ringtone')
+    axios.get(`/api/${apiName}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -31,7 +31,7 @@ const navigate = useNavigate();
     setSelectedCard(cardName);
 
    
-    axios.put('/api/choose-ringtone', { selectedCard: cardName })
+    axios.put(`/api/${apiName}`, { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })

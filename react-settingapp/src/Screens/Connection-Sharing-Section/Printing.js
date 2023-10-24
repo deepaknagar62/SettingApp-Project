@@ -16,7 +16,8 @@ export default function Printing() {
     }
 
   return (
-    <>
+    <>  
+        <div className='printing-container'>
         <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Printing"></Headingtxt>
         <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'25px',fontWeight:'300' , marginLeft:'25px'}}>
@@ -37,6 +38,8 @@ export default function Printing() {
 
             <br></br> 
             <Line></Line>
+
+            </div>
     </>
   )
 }

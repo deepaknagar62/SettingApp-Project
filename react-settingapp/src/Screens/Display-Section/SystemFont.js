@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Line from '../../Components/Line';
 import axios from 'axios'
 export default function SystemFont() {
+  const apiName = "choose-font"
   const navigate = useNavigate();
   const goback=()=>{
     navigate('/display')
@@ -16,7 +17,7 @@ export default function SystemFont() {
 
     
   useEffect(() => {
-    axios.get('/api/choose-font')
+    axios.get(`/api/${apiName}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -29,7 +30,7 @@ export default function SystemFont() {
     setSelectedCard(cardName);
 
    
-    axios.put('/api/choose-font', { selectedCard: cardName })
+    axios.put(`/api/${apiName}`, { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })

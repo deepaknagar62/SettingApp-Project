@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function PreferredNetwork() {
-
+     const apiName = 'preferred-network-sim1';
     const navigate = useNavigate();
     const goback=()=>{
         navigate('/simcard-settings');
@@ -17,7 +17,7 @@ export default function PreferredNetwork() {
 
     
     useEffect(() => {
-      axios.get('/api/preferred-network-sim1')
+      axios.get(`/api/${apiName}`)
         .then(response => {
           setSelectedCard(response.data.selectedCard);
         })
@@ -30,7 +30,7 @@ export default function PreferredNetwork() {
       setSelectedCard(cardName);
   
      
-      axios.put('/api/preferred-network-sim1', { selectedCard: cardName })
+      axios.put(`/api/${apiName}`, { selectedCard: cardName })
         .then(response => {
           console.log('Selected card updated:', response.data.selectedCard);
         })
@@ -48,6 +48,7 @@ export default function PreferredNetwork() {
 
   return (
     <>
+        <div className='preferred-network-container'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Preferred network type"></Headingtxt>
 
@@ -66,7 +67,7 @@ export default function PreferredNetwork() {
         </div>
 
       
-      
+        </div>
     </>
   )
 }

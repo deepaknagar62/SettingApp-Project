@@ -12,6 +12,12 @@ import axios from "axios";
 
 
 export default function SimCards() {
+  const apiName1 = 'default-sim-for-calls';
+  const apiName2 = 'default-sim-for-data';
+  const sim1Name = 'sim1-name'
+  const sim1Number = 'sim1-number'
+  const sim2Name = 'sim2-name'
+  const sim2Number = 'sim2-number'
  const navigate = useNavigate();
 
  const OpenSimSettings=()=>{
@@ -38,7 +44,7 @@ export default function SimCards() {
 
 
   useEffect(() => {
-    axios.get('/api/default-sim-for-calls')
+    axios.get(`/api/${apiName1}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard,);
       })
@@ -51,7 +57,7 @@ export default function SimCards() {
     setSelectedCard(optionName);
 
     
-    axios.put('/api/default-sim-for-calls', { selectedCard: optionName })
+    axios.put(`/api/${apiName1}`, { selectedCard: optionName })
       .then(response => {
         console.log('Selected option updated:', response.data.selectedCard);
       })
@@ -73,7 +79,7 @@ export default function SimCards() {
   const [selectedCard2, setSelectedCard2] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/default-sim-for-data')
+    axios.get(`/api/${apiName2}`)
       .then(response => {
         setSelectedCard2(response.data.selectedCard,);
       })
@@ -86,7 +92,7 @@ export default function SimCards() {
     setSelectedCard2(optionName);
 
     
-    axios.put('/api/default-sim-for-data', { selectedCard: optionName })
+    axios.put(`/api/${apiName2}`, { selectedCard: optionName })
       .then(response => {
         console.log('Selected option updated:', response.data.selectedCard);
       })
@@ -104,11 +110,13 @@ export default function SimCards() {
 
 
 
-  const [sim1_name, setText] = useState('');
+
+
+  const [sim1_name, setText] = useState('Jio');
 
     
     useEffect(() => {
-      axios.get('/api/sim1-name')
+      axios.get(`/api/text-data/${sim1Name}`)
         .then(response => {
           setText(response.data.enteredText);
         })
@@ -118,11 +126,11 @@ export default function SimCards() {
     }, []);
 
    
-    const [sim1_number, setNumber] = useState('');
+    const [sim1_number, setNumber] = useState('6261877594');
 
     
     useEffect(() => {
-      axios.get('/api/sim1-number')
+      axios.get(`/api/text-data/${sim1Number}`)
         .then(response => {
           setNumber(response.data.enteredText);
         })
@@ -136,11 +144,11 @@ export default function SimCards() {
 
 
 
-    const [sim2_name, setSim2Name] = useState('');
+    const [sim2_name, setSim2Name] = useState('Airtel');
 
     
     useEffect(() => {
-      axios.get('/api/sim2-name')
+      axios.get(`/api/text-data/${sim2Name}`)
         .then(response => {
           setSim2Name(response.data.enteredText);
         })
@@ -150,11 +158,11 @@ export default function SimCards() {
     }, []);
 
    
-    const [sim2_number, setSim2Number] = useState('');
+    const [sim2_number, setSim2Number] = useState('9977380998');
 
     
     useEffect(() => {
-      axios.get('/api/sim2-number')
+      axios.get(`/api/text-data/${sim2Number}`)
         .then(response => {
           setSim2Number(response.data.enteredText);
         })
@@ -171,6 +179,7 @@ export default function SimCards() {
 
   return (
     <>
+      <div className="simCardNetwork-container">
       <BackArrow onClick={goback}></BackArrow>
       <Headingtxt headingtxt="SIM & mobile networks"></Headingtxt>
       <div style={{ display: "flex" }}>
@@ -281,6 +290,8 @@ export default function SimCards() {
                  use a SIM card that was used during the previous call with this contact
                  <div style={{display:'flex', marginLeft:'-95px',marginTop:'-10px'}}> <ToggleBtn name="simnet_rememberSim"></ToggleBtn></div>
             </p>
+           </div>
+
            </div>
     </>
   );

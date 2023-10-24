@@ -29,7 +29,9 @@ export default function SimcardSettings() {
 
   return (
     <>
- 
+       
+       <div className='simCardsettings-container'>
+
       <BackArrow onClick={goback}></BackArrow>
      <Headingtxt headingtxt="SIM card settings"></Headingtxt>
       
@@ -89,6 +91,7 @@ export default function SimcardSettings() {
             </p>
            </div>
         
+           </div>
     </>
   )
 }

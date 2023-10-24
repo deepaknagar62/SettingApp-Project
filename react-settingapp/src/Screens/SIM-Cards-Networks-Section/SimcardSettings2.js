@@ -28,7 +28,7 @@ export default function SimcardSettings2() {
 
   return (
     <>
- 
+        <div className='simCardsettings-container'>
       <BackArrow onClick={goback}></BackArrow>
      <Headingtxt headingtxt="SIM card settings"></Headingtxt>
       
@@ -86,6 +86,8 @@ export default function SimcardSettings2() {
                  Use Wi-Fi to make and receive calls whenever possible
                  <div style={{display:'flex', marginLeft:'-65px',marginTop:'-10px'}}> <ToggleBtn name="simcard_makeCallWiFi2"></ToggleBtn></div>
             </p>
+           </div>
+
            </div>
 
            </>

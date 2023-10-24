@@ -52,7 +52,7 @@
 .selected {
   border: 5px solid rgb(54, 137, 247);
   color: rgb(54, 137, 247);;
-  height: 30px;
+  height: 28px;
   margin-top: -20px;
   margin-left: 25px;
   
@@ -80,5 +80,24 @@
   font-size: 14px;
   color: #534d4d;
   font-weight: 300;
+  
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    
+  .simCardNetwork-container{
+    width: 30%;
+    height: 165%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: translate(-50%, -50%);
+  }
+
   
 }

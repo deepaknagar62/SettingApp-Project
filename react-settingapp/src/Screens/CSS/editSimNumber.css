@@ -33,3 +33,21 @@
   button:hover {
     background-color: #0056b3;
   }
+
+
+
+  @media screen and (min-width: 1024px) {
+    
+    .editsim-number-container{
+      width: 30%;
+      height: 105%;
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+    }
+  
+    
+  }

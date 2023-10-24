@@ -4,6 +4,7 @@ import Headingtxt from '../../Components/Headingtxt'
 import ToggleBtn from '../../Components/ToggleBtn'
 import printservice from '../Images/printservice.png';
 import { useNavigate } from 'react-router-dom';
+import '../CSS/printing.css'
 
 export default function SystemPrintingService() {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ export default function SystemPrintingService() {
 
   return (
     <>
-      
+      <div className='printing-container'>
       <BackArrow onClick={goback}></BackArrow>
       <Headingtxt headingtxt="System printing service"></Headingtxt>  
 
@@ -24,6 +25,8 @@ export default function SystemPrintingService() {
               </div>  
 
               <div style={{marginLeft:'40px', marginRight:'30px',marginTop:'20px'}}> <img src={printservice} alt="castimg" width="300" ></img> </div>  
+
+              </div>
     </>
   )
 }

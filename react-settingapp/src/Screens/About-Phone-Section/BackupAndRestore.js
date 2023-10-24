@@ -8,7 +8,7 @@ import BackArrow from '../../Components/BackArrow';
 import axios from 'axios';
 
 export default function BackupAndRestore(){
-   
+  const apiName = 'choose-backup-accounts';
   const navigate = useNavigate();
   const OpenMoblieDevice=()=>{
     navigate('/local-mobile-backup');
@@ -31,7 +31,7 @@ export default function BackupAndRestore(){
   const [selectedAccount, setSelectedAccount] = useState("nagardeepak9098@gmail.com");
 
     useEffect(() => {
-      axios.get('/api/choose-backup-accounts')
+      axios.get(`/api/${apiName}`)
         .then(response => {
           setSelectedAccount(response.data.selectedCard);
         })

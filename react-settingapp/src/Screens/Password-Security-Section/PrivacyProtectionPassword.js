@@ -7,11 +7,17 @@ import Line from '../../Components/Line'
 import Lighttext from '../../Components/Lighttext'
 import { useNavigate } from 'react-router-dom'
 
+
 export default function PrivacyProtectionPassword() {
+    
     const navigate = useNavigate();
     const goback=()=>{
         navigate('/password-security')
     }
+
+
+
+   
   return (
     <>
 
@@ -22,6 +28,12 @@ export default function PrivacyProtectionPassword() {
             <span >SET PASSWORDS</span></div> 
 
          
+
+
+           
+
+
+
 
           <div className="ppp-container "  >
                 <span style={{marginRight:'50px'}}>Privacy protection password</span> 

@@ -44,13 +44,12 @@
      
     .localmoboile-container{
         width: 30%;
-        height: 60%;
+        height: 120%;
         position: absolute;
-        top: 30%;
+        top: 60%;
         left: 50%;
-        border-radius: 20px;
-        align-items: center;
-        justify-content: center;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         transform: translate(-50%, -50%);
     }
   

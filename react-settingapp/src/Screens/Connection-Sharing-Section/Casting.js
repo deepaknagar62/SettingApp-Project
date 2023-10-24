@@ -17,6 +17,7 @@ export default function Casting() {
   }
   return (
     <> 
+       <div className='cast-phone-container'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Cast"></Headingtxt>
 
@@ -55,6 +56,7 @@ export default function Casting() {
                 <p style={{fontSize:'15px', fontWeight:'300',marginTop:'0px',marginRight:'10px'}}>
                   Don't display floating notifications, incoming calls, and other private items on external
                   monitors</p>
+              </div>
               </div>
     </>
   )

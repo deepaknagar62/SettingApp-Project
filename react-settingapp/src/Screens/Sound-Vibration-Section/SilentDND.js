@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 export default function SilentDND() {
+  const apiName = 'silent-DND';
   const navigate = useNavigate();
 
   const goback=()=>{
@@ -18,7 +19,7 @@ export default function SilentDND() {
   const [selectedCard, setSelectedCard] = useState(null);
 
   useEffect(() => {
-    axios.get('/api/silent-DND')
+    axios.get(`/api/${apiName}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -31,7 +32,7 @@ export default function SilentDND() {
     setSelectedCard(cardName);
 
     
-    axios.put('/api/silent-DND', { selectedCard: cardName })
+    axios.put(`/api/${apiName}`, { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })

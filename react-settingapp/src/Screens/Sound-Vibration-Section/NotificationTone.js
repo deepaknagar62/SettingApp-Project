@@ -6,7 +6,7 @@ import axios from 'axios';
 import '../CSS/notificationTone.css'
 
 export default function NotificationTone() {
-
+  const apiName = "notification-ring" 
    const navigate = useNavigate();
 
    const goback=()=>{
@@ -18,7 +18,7 @@ export default function NotificationTone() {
 
     
   useEffect(() => {
-    axios.get('/api/choose-notification-ring')
+    axios.get(`/api/${apiName}`)
       .then(response => {
         setSelectedCard(response.data.selectedCard);
       })
@@ -31,7 +31,7 @@ export default function NotificationTone() {
     setSelectedCard(cardName);
 
    
-    axios.put('/api/choose-notification-ring', { selectedCard: cardName })
+    axios.put(`/api/${apiName}`, { selectedCard: cardName })
       .then(response => {
         console.log('Selected card updated:', response.data.selectedCard);
       })

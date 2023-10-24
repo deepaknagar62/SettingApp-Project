@@ -14,6 +14,8 @@ import { useNavigate } from 'react-router-dom'
 import VolumeContainer from '../../Components/VolumeContainer'
 import axios from 'axios'
 export default function SoundAndVibration(){
+    const apiName = "notification-ring"
+    const chooseRing = 'choose-ringtone'
     const navigate = useNavigate();
 
     const OpneSilentDND=()=>{
@@ -39,7 +41,7 @@ export default function SoundAndVibration(){
 
     
       useEffect(() => {
-        axios.get('/api/choose-ringtone')
+        axios.get(`/api/${chooseRing}`)
           .then(response => {
             setRingtone(response.data.selectedCard);
           })
@@ -54,7 +56,7 @@ export default function SoundAndVibration(){
 
     
       useEffect(() => {
-        axios.get('/api/choose-notification-ring')
+        axios.get(`/api/${apiName}`)
           .then(response => {
             setNotificationRing(response.data.selectedCard);
           })

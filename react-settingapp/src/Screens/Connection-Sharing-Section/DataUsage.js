@@ -20,7 +20,7 @@ export default function DataUsage() {
   }
   return (
     <>
-
+       <div className='data-usage-container'>
        <BackArrow  onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Data usage"></Headingtxt>
 
@@ -123,7 +123,7 @@ export default function DataUsage() {
                      </p>
                  
             </div> 
-      
+            </div>
     </>
   )
 }

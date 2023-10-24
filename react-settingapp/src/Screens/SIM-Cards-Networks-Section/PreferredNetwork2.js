@@ -7,6 +7,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 
 export default function PreferredNetwork2() {
+    const apiName = 'preferred-network-sim2';
     const navigate = useNavigate();
     const goback=()=>{
         navigate('/simcard-settings2');
@@ -16,7 +17,7 @@ export default function PreferredNetwork2() {
 
     
     useEffect(() => {
-      axios.get('/api/preferred-network-sim2')
+      axios.get(`/api/${apiName}`)
         .then(response => {
           setSelectedCard(response.data.selectedCard);
         })
@@ -29,7 +30,7 @@ export default function PreferredNetwork2() {
       setSelectedCard(cardName);
   
      
-      axios.put('/api/preferred-network-sim2', { selectedCard: cardName })
+      axios.put(`/api/${apiName}`, { selectedCard: cardName })
         .then(response => {
           console.log('Selected card updated:', response.data.selectedCard);
         })
@@ -45,7 +46,9 @@ export default function PreferredNetwork2() {
     ];
 
   return (
-    <>
+    <>  
+
+       <div className='preferred-network-container'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Preferred network type"></Headingtxt>
 
@@ -60,6 +63,7 @@ export default function PreferredNetwork2() {
               <p  style={{fontSize:'20px', fontWeight:'550',marginLeft:'30px'}}>{cardName}</p>
             </div>
           ))}
+        </div>
         </div>
 
       

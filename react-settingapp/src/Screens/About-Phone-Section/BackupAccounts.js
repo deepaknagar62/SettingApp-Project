@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function BackupAccounts() {
-
+  const apiName = 'choose-backup-accounts';
   const navigate = useNavigate();
 
     const goback=()=>{
@@ -19,7 +19,7 @@ export default function BackupAccounts() {
 
     
     useEffect(() => {
-      axios.get('/api/choose-backup-accounts')
+      axios.get(`/api/${apiName}`)
         .then(response => {
           setSelectedCard(response.data.selectedCard);
         })
@@ -32,7 +32,7 @@ export default function BackupAccounts() {
       setSelectedCard(cardName);
   
      
-      axios.put('/api/choose-backup-accounts', { selectedCard: cardName })
+      axios.put(`/api/${apiName}`, { selectedCard: cardName })
         .then(response => {
           console.log('Selected card updated:', response.data.selectedCard);
         })

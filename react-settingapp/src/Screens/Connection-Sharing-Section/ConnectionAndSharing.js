@@ -37,6 +37,7 @@ export default function ConnectionAndSharing(){
     return(
 
         <>
+               <div className='connection-sharing-container'>
               <BackArrow onClick={goback}></BackArrow>
               <Headingtxt headingtxt="Connection & sharing"></Headingtxt>
              
@@ -97,6 +98,8 @@ export default function ConnectionAndSharing(){
                     Reset Wi-Fi,mobile networks, and Bluetooth </span>
                 <div style={{marginTop:'30px',display:'flex',marginRight:'60px' , marginLeft:'-45px',fontSize:'25px',fontWeight:'200'}}> &#62;</div>
               </div>  
+
+              </div>
 
         </>
     );

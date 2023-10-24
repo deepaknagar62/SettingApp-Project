@@ -6,7 +6,7 @@ import '../CSS/editSimName.css'
 import axios from 'axios';
 
 export default function EditSimName1() {
-
+  const sim1Name = 'sim1-name'
     const navigate = useNavigate();
     const goback=()=>{
         navigate('/simcard-settings');
@@ -17,7 +17,7 @@ export default function EditSimName1() {
 
     
     useEffect(() => {
-      axios.get('/api/sim1-name')
+      axios.get(`/api/text-data/${sim1Name}`)
         .then(response => {
           setText(response.data.enteredText);
         })
@@ -28,7 +28,7 @@ export default function EditSimName1() {
   
     const handleSaveClick = () => {
      
-      axios.put('/api/sim1-name', { enteredText: text })
+      axios.put(`/api/text-data/${sim1Name}`, { enteredText: text })
         .then(response => {
           console.log('Entered text updated:', response.data.enteredText);
         })
@@ -42,13 +42,14 @@ export default function EditSimName1() {
 
   return (
     <>
-
+        <div className='editsim-name-container'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Edit SIM card name"></Headingtxt>
 
        <div className="card">
         <input type="text" value={text} placeholder="Enter sim name" onChange={(e) => setText(e.target.value)} id="editText" />
-        <button onClick={handleSaveClick} id="saveButton">Save</button>
+        <button onClick={handleSaveClick} >Save</button>
+      </div>
       </div>
       
     </>

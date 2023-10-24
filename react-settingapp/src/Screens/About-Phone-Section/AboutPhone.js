@@ -10,7 +10,7 @@ import axios from 'axios';
 
 
 export default function AboutPhone(){
-   
+    const deviceName = 'device-name'
     const navigate = useNavigate();
 
     const OpenAllSpecs =()=>{
@@ -36,7 +36,7 @@ export default function AboutPhone(){
 
     
     useEffect(() => {
-      axios.get('/api/device-name')
+      axios.get(`/api/text-data/${deviceName}`)
         .then(response => {
             setDeviceName(response.data.enteredText);
         })
