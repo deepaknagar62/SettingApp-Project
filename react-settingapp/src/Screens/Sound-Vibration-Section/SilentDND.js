@@ -57,7 +57,8 @@ export default function SilentDND() {
   ];
 
   return (
-    <>
+    <> 
+       <div className='silent-dnd-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Silent/DND"></Headingtxt>
 
@@ -91,6 +92,8 @@ export default function SilentDND() {
 
            <br></br>
        <Line></Line>
+
+       </div>
     </>
   )
 }

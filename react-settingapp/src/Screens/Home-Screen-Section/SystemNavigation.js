@@ -52,7 +52,7 @@ export default function SystemNavigation() {
 
   return (
     <>
-
+         <div className='system-navigation-conainer'>
         <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="System navigation"></Headingtxt>
             
@@ -70,7 +70,7 @@ export default function SystemNavigation() {
 
 
          <div style={{marginLeft:"55px", marginTop:'10px',fontSize:'18px',fontWeight:'500',display:'flex'}}> Buttons
-         <p style={{marginLeft:"110px", marginTop:'0px',fontSize:'18px',fontWeight:'500'}}> Full screen gestures </p></div>
+         <p style={{marginLeft:"100px", marginTop:'0px',fontSize:'18px',fontWeight:'500'}}> Full screen gestures </p></div>
           
          <br></br><br></br>
          <Line></Line> 
@@ -82,7 +82,7 @@ export default function SystemNavigation() {
                     <p style={{marginLeft:'0px',marginTop:'0px',marginRight:'50px' ,fontSize:'15px',fontWeight:'250'}}> Mirror back and Menu buttons </p>
                     <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="SysNav_mirrorbtn"></ToggleBtn></div></span>
               </div>
-      
+              </div>
     </>
   )
 }

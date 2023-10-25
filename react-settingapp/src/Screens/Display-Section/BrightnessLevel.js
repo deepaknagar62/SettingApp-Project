@@ -15,7 +15,8 @@ export default function BrightnessLevel() {
     navigate('/display')
   }
   return (
-    <>
+    <>   
+         <div className='brightness-level-conainer'>
          <BackArrow onClick={goback}></BackArrow>
          <Headingtxt headingtxt="Brightness level"></Headingtxt>  
 
@@ -41,6 +42,8 @@ export default function BrightnessLevel() {
            </div> 
 
            <Lighttext text="Adjust brightness to strong ambient light when automatic brightness is off"></Lighttext>
+
+           </div>
     </>
   )
 }

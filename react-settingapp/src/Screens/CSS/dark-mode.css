@@ -1,0 +1,54 @@
+
+.dark-mode {
+    background-color: #1a1a1a; 
+    color: #ffffff; 
+  }
+  
+ 
+  .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6 {
+    color: #ffffff; 
+  }
+  
+
+  .dark-mode p, .dark-mode a, .dark-mode span {
+    color: #dddddd; 
+  }
+  
+ 
+  .dark-mode a {
+    text-decoration: none; 
+    color: #3498db; 
+  }
+  
+  .dark-mode a:hover {
+    color: #1e87e7; 
+  }
+  
+
+  .dark-mode .button {
+    background-color: #3498db; 
+    color: #ffffff; 
+  }
+  
+  .dark-mode .button:hover {
+    background-color: #1e87e7; 
+  }
+  
+
+  .dark-mode .reading-container{
+    background-color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    color: #ffffff;
+  }
+  .dark-mode .reading-container p{
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .dark-mode .BackArrow, .dark-mode .Headingtxt {
+    color: #ffffff; 
+  }
+
+  .dark-mode .Headingtxt{
+    color: #ffffff !important;
+  }

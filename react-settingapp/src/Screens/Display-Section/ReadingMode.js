@@ -13,7 +13,8 @@ export default function ReadingMode() {
     navigate('/display')
   }
   return (
-    <>
+    <>   
+         <div className='display-brightness-conainer'>
         <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Reading mode"></Headingtxt>
 
@@ -35,7 +36,7 @@ export default function ReadingMode() {
                  <div style={{display:'flex', marginLeft:'-80px' ,marginTop:'-5px'}}> <ToggleBtn name="readinmode_schedule"></ToggleBtn></div>
             </p>
            </div>
-      
+           </div>
     </>
   )
 }

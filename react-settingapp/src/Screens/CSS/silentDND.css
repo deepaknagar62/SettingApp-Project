@@ -18,3 +18,25 @@
     color: rgb(3, 101, 228);;
     
   }
+
+
+
+
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .silent-dnd-conainer{
+      width: 30%;
+      height: 120%;
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+    }
+  
+
+  }

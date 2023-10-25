@@ -63,6 +63,7 @@ export default function HomePage(){
            <div className='homepage-container'> 
 
             <div className='setting'>  Settings </div>
+          
            <div class="search-bar">
             <div class="search-icon">
                 <i class="fa fa-search"></i> 

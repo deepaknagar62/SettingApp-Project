@@ -104,3 +104,22 @@
     border-radius: 15px;
   }
   
+
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .sound-vibration-conainer{
+      width: 30%;
+      height: 140%;
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+    }
+  
+
+  }

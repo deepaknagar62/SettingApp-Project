@@ -54,7 +54,8 @@ export default function SystemFont() {
 
 
   return (
-    <>
+    <>    
+         <div className='system-font-conainer'>
          <BackArrow onClick={goback}></BackArrow>
          <Headingtxt headingtxt="System font"></Headingtxt>  
 
@@ -76,7 +77,7 @@ export default function SystemFont() {
           ))}
         </div>
 
-
+        </div>
 
 
 

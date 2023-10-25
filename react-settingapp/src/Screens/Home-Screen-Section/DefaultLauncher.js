@@ -46,7 +46,7 @@ export default function DefaultLauncher() {
   ];
   return (
     <>
-
+       <div className='default-launcher-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Default Home Screen"></Headingtxt>
        
@@ -65,7 +65,7 @@ export default function DefaultLauncher() {
           ))}
         </div>
 
-
+        </div>
       
     </>
   )

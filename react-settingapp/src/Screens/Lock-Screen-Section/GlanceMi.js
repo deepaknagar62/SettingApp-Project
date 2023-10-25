@@ -14,7 +14,7 @@ export default function GlanceMi() {
 
   return (
     <>
-
+        <div className='glance-mi-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Glance for Mi"></Headingtxt>
         
@@ -25,6 +25,8 @@ export default function GlanceMi() {
                 <div style={{display:'flex', marginLeft:'-50px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="glanceMi_turnON"></ToggleBtn></div>
             </p>
         </div> 
+
+        </div>
     </>
   )
 }

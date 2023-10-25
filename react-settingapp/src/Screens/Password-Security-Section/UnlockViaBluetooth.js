@@ -4,6 +4,7 @@ import Headingtxt from '../../Components/Headingtxt'
 import ToggleBtn from '../../Components/ToggleBtn'
 import Line from '../../Components/Line'
 import { useNavigate } from 'react-router-dom'
+import '../CSS/faceUnlock.css'
 
 export default function UnlockViaBluetooth() {
     const navigate = useNavigate();
@@ -12,7 +13,7 @@ export default function UnlockViaBluetooth() {
     }
   return (
     <>
-
+        <div className='face-unlock-conainer'>
         <BackArrow onClick={goback} ></BackArrow>
         <Headingtxt headingtxt="Unlock with Bluetooth device"></Headingtxt>
 
@@ -35,7 +36,7 @@ export default function UnlockViaBluetooth() {
 
             <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'25px',fontWeight:'300' , marginLeft:'25px'}}>
             <span >No device detected</span></div>   
-      
+            </div>
     </>
   )
 }

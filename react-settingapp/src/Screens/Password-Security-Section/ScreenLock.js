@@ -55,7 +55,7 @@ export default function ScreenLock() {
   
   return (
     <>
-
+         <div className='screen-lock-all-conainer'>
          <BackArrow onClick={goback}></BackArrow>
          <Headingtxt headingtxt="Change screen lock"></Headingtxt>
 
@@ -83,6 +83,7 @@ export default function ScreenLock() {
        <div style={{color:'red' , fontSize:'15px',marginTop:'25px',fontWeight:'500' , marginLeft:'25px'}}>
             <span >Turn off screen lock</span></div> 
       
+            </div>
     </>
   )
 }

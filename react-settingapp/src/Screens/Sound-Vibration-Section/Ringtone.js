@@ -56,7 +56,7 @@ const navigate = useNavigate();
 
   return (
     <>
-          
+          <div className='ring-tone-conainer'>
           <BackArrow onClick={goback}></BackArrow>
           <Headingtxt headingtxt="Choose Ringtone"></Headingtxt>
 
@@ -76,7 +76,7 @@ const navigate = useNavigate();
 
 
 
-
+        </div>
 
 
 

@@ -24,7 +24,7 @@ export default function FullscreenMode() {
     }
   return (
     <>
-
+       <div className='full-screenmode-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Fullscreen mode"></Headingtxt>
        <Lighttext text="This apps works best in fullscreen mode"></Lighttext>
@@ -97,7 +97,7 @@ export default function FullscreenMode() {
                 <div style={{display:'flex', marginLeft:'50px'}}> <ToggleBtn name="FSM_chrome"></ToggleBtn></div>
             </div>
 
-      
+            </div>
     </>
   )
 }

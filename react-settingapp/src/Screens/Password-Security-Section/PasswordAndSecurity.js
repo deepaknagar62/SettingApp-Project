@@ -46,7 +46,7 @@ export default function PasswordAndSecurity(){
     return(
 
         <>
-           
+            <div className='password-security-conainer'>
            <BackArrow onClick={openHomepage}></BackArrow>
            <Headingtxt headingtxt="Password & security"></Headingtxt>
 
@@ -110,7 +110,8 @@ export default function PasswordAndSecurity(){
 
             <Lighttext text="NEED OTHER SETTINGS"></Lighttext>
             <p style={{marginLeft:'25px',fontWeight:'500' ,marginTop:'10px',fontSize:'18px'}} onClick={openlockscreen}>Lock Screen</p>
-
+          
+            </div>
         </>
     );
 

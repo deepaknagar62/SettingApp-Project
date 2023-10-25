@@ -24,3 +24,23 @@
     transition: width 0.2s ease;
     border-radius: 15px;
   }
+
+
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .brightness-level-conainer{
+      width: 30%;
+      height: 103%;
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+    }
+  
+
+  }

@@ -50,7 +50,7 @@ export default function InHomeScreen() {
  ];
   return (
     <>
-
+         <div className='inHome-screen-conainer'>
         <BackArrow onClick={goback}></BackArrow>
         <Headingtxt headingtxt="Home screen"></Headingtxt>
 
@@ -84,7 +84,7 @@ export default function InHomeScreen() {
                     <p style={{marginLeft:'0px',marginTop:'0px',marginRight:'50px' ,fontSize:'20px',fontWeight:'550'}}> to open serach </p>
                     <div style={{marginTop:'-50px',display:'flex' , marginLeft:'180px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="inHome_swipeUpHomeScreen"></ToggleBtn></div></span>
               </div>
-               
+              </div>
     </>
   )
 }

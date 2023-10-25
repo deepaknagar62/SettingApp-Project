@@ -67,7 +67,7 @@ export default function SoundAndVibration(){
 
     return(
         <>
-          
+          <div className='sound-vibration-conainer'>
           <BackArrow onClick={goback}></BackArrow>
           <Headingtxt headingtxt="Sound & vibration"></Headingtxt>
 
@@ -148,7 +148,7 @@ export default function SoundAndVibration(){
              <div style={{marginTop:'15px',display:'flex' , marginLeft:'110px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
             </div>
 
-    
+            </div>
 
 
         </>

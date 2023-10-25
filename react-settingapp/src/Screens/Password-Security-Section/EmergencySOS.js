@@ -15,6 +15,8 @@ export default function EmergencySOS() {
 
   return (
     <>
+
+       <div className='emergency-sos-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Emergency SOS"></Headingtxt>
 
@@ -34,7 +36,7 @@ export default function EmergencySOS() {
 
             <br></br>
             <Line></Line>
-      
+            </div>
     </>
   )
 }

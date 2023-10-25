@@ -18,7 +18,8 @@ export default function Battery(){
 
     return(
 
-        <>
+        <>  
+            <div className='battery-conainer'>
             <BackArrow onClick={goback}></BackArrow>
             <Headingtxt headingtxt="Battery saver"></Headingtxt>
 
@@ -57,6 +58,8 @@ export default function Battery(){
 
           <br></br>
           <Line></Line>
+
+          </div>
         </>
     );
 

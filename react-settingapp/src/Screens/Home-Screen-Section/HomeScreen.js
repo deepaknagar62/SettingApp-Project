@@ -26,7 +26,8 @@ export default function HomeScreen(){
 
     return(
 
-        <>
+        <> 
+           <div className='home-screen-conainer'>
            <BackArrow onClick={goback}></BackArrow>
            <Headingtxt headingtxt="Home screen"></Headingtxt>
 
@@ -94,7 +95,7 @@ export default function HomeScreen(){
                         <span style={{marginRight:'50px'}}>Global icon animations</span> 
                         <p style={{display:'flex', justifyItems:'center' ,fontSize:'14px',marginRight:'30px' }}>
                          Render animations on third party app icons
-                            <div style={{display:'flex', marginLeft:'-70px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="homescreen_globalIconAnimation"></ToggleBtn></div>
+                            <div style={{display:'flex', position:'absolute' ,marginLeft:'180px' , fontSize:'25px',marginTop:'-15px',fontWeight:'200'}}> <ToggleBtn name="homescreen_globalIconAnimation"></ToggleBtn></div>
                         </p>
                </div> 
 
@@ -116,6 +117,9 @@ export default function HomeScreen(){
                     <span style={{marginLeft:'20px',marginTop:'20px',marginRight:'5px' ,fontSize:'20px',fontWeight:'550'}}>
                         Show suggestions <div style={{marginTop:'-22px',display:'flex' , marginLeft:'183px',fontSize:'25px',fontWeight:'200'}}> <ToggleBtn name="homescreen_showSuggetions"></ToggleBtn></div></span>
                     
+                </div>
+
+
                 </div>
         </>
     );

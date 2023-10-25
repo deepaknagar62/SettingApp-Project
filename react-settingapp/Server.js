@@ -175,6 +175,44 @@ app.put('/api/text-data/:textName', async (req, res) => {
 
 
 
+
+
+
+const SleepOption = mongoose.model('SleepOption', {
+  name: String,
+  selectedOption: String,
+});
+
+
+
+app.get('/api/select-option/sleepOption', async (req, res) => {
+  try {
+    const sleepOption = await SleepOption.findOne().sort({ _id: -1 });
+    res.json({ name: sleepOption.name, selectedOption: sleepOption.selectedOption });
+  } catch (err) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+app.put('/api/select-option/sleepOption', async (req, res) => {
+  const { name, selectedOption } = req.body;
+  const sleepOption = new SleepOption({ name, selectedOption });
+
+  try {
+    await sleepOption.save();
+    res.json({ name: sleepOption.name, selectedOption: sleepOption.selectedOption });
+  } catch (err) {
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+});
+
+
+
+
+
+
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });

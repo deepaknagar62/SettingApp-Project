@@ -47,7 +47,7 @@ export default function DeviceInVR() {
 
   return (
     <>
-
+       <div className='device-in-vr-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="When device is in VR"></Headingtxt>
 
@@ -64,7 +64,7 @@ export default function DeviceInVR() {
           ))}
         </div>
 
-
+        </div>
       
       
     </>

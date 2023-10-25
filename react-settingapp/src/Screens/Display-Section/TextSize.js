@@ -73,7 +73,8 @@ export default function TextSize() {
 
 
   return (
-    <>
+    <> 
+        <div className='text-size-conainer'>
        <BackArrow onClick={goback}></BackArrow>
        <Headingtxt headingtxt="Text Size"></Headingtxt>
 
@@ -96,7 +97,7 @@ export default function TextSize() {
           ))}
         </div>
 
-
+        </div>
 
 
 

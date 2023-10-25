@@ -56,7 +56,8 @@ export default function NotificationTone() {
   
 
   return (
-    <>
+    <> 
+         <div className='notification-tone-conainer'>
          <BackArrow onClick={goback}></BackArrow>
           <Headingtxt headingtxt="Notification Ring"></Headingtxt>
 
@@ -71,6 +72,7 @@ export default function NotificationTone() {
               <p style={{fontSize:'20px', fontWeight:'400',marginLeft:'30px',marginTop:'0px' }}>{cardName}</p>
             </div>
           ))}
+        </div>
         </div>
     </>
   )

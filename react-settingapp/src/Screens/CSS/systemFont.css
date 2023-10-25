@@ -18,3 +18,22 @@
     color: rgb(3, 101, 228);;
     
   }
+
+
+
+  @media screen and (min-width: 1024px) {
+ 
+     
+    .system-font-conainer{
+      width: 30%;
+      height: 130%;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transform: translate(-50%, -50%);
+    }
+  
+
+  }

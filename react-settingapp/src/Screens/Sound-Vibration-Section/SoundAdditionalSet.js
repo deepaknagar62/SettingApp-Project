@@ -3,6 +3,7 @@ import BackArrow from '../../Components/BackArrow'
 import Headingtxt from '../../Components/Headingtxt'
 import ToggleBtn from '../../Components/ToggleBtn'
 import { useNavigate } from 'react-router-dom';
+import '../CSS/silentDND.css'
 
 export default function SoundAdditionalSet() {
 
@@ -13,7 +14,7 @@ export default function SoundAdditionalSet() {
   }
   return (
     <>
-
+      <div className='silent-dnd-conainer'>
      <BackArrow onClick={goback}></BackArrow>
      <Headingtxt headingtxt="Additional settings"></Headingtxt>
 
@@ -53,6 +54,7 @@ export default function SoundAdditionalSet() {
                  Boot audio </span>
              <div style={{marginTop:'20px',display:'flex' , marginLeft:'53px'}}> <ToggleBtn name="SAS_bootAudio"></ToggleBtn></div>
            </div> 
+           </div>
       
     </>
   )
