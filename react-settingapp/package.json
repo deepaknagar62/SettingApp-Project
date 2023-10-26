@@ -23,7 +23,6 @@
   "proxy": "http://localhost:8000",
   
   "scripts": {
-    "start": "node Server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
