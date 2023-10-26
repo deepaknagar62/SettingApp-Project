@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import BackArrow from '../../Components/BackArrow';
-import Headingtxt from '../../Components/Headingtxt';
 import '../CSS/displayBrightness.css';
 import '../CSS/dark-mode.css';
 import Line from '../../Components/Line';
@@ -38,10 +37,13 @@ export default function DisplayAndBrightness(){
     const goback=()=>{
         navigate('/')
       }
+      
 
 
       const [selectedCard, setSelectedCard] = useState(null);
       const [darkMode, setDarkMode] = useState(false);
+
+      
 
       useEffect(() => {
         axios.get(`/api/${apiName}`)
@@ -80,7 +82,8 @@ export default function DisplayAndBrightness(){
             <div className={`display-brightness-conainer ${darkMode ? 'dark-mode' : ''}`}>
            
            <BackArrow onClick={goback}></BackArrow>
-           <Headingtxt headingtxt="Display and Brightness"></Headingtxt>
+           <div className='main-heading'>Display and Brightness</div>
+
            <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'25px',fontWeight:'300' , marginLeft:'25px'}}>
             <span >COLOUR SCHEME</span></div>
         

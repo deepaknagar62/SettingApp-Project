@@ -56,12 +56,20 @@ import EditSimNumber2 from './Screens/SIM-Cards-Networks-Section/EditSimNumber2'
 import DeviceName from './Screens/About-Phone-Section/DeviceName';
 import Ringtone from './Screens/Sound-Vibration-Section/Ringtone';
 import NotificationTone from './Screens/Sound-Vibration-Section/NotificationTone';
+import FaceData from './Screens/Password-Security-Section/FaceData';
+
 
 
 
 function App() {
+
+  
+
+
   return (
     <> 
+     
+
      <Router>
       
         <Routes>
@@ -141,6 +149,7 @@ function App() {
           <Route path='/privacy-protection-password' element={<PrivacyProtectionPassword/>}></Route>
           <Route path='/emergency-alerts' element={<EmergencyAlerts/>}></Route>
           <Route path='/emergency-sos' element={<EmergencySOS/>}></Route>
+          <Route path='/face-data' element={<FaceData/>}></Route>
 
 
         </Routes>

@@ -5,6 +5,17 @@
 
 }
 
+.main-heading{
+  color: rgb(54, 52, 52);
+  margin-left: 20px;
+  margin-top: 10px;
+  padding-top: 10px;
+  font-size: 30px;
+  font-weight: 200;
+  
+}
+
+
 .reading-container  {
     display: block;
     border: 1px solid #ffffff;

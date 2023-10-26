@@ -5,13 +5,13 @@ import axios from 'axios';
 const SleepPopup = ({ onClose, onSleep }) => {
 
     const [selectedOption, setSelectedOption] = useState({ name: '', selectedOption: null });
-    const [loading, setLoading] = useState(true);
+    
   
     const fetchSelectedOption = async () => {
       try {
         const response = await axios.get('/api/select-option/sleepOption');
         setSelectedOption(response.data);
-        setLoading(false);
+        
       } catch (error) {
         console.error('Error fetching selected option:', error);
       }

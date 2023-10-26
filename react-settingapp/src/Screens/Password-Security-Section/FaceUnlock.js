@@ -11,6 +11,9 @@ export default function FaceUnlock() {
     const goback=()=>{
         navigate('/password-security');
     }
+    const openfacedata=()=>{
+        navigate('/face-data');
+    }
   return (
     <> 
      <div className='face-unlock-conainer'>
@@ -20,13 +23,13 @@ export default function FaceUnlock() {
       <div style={{color:'#534d4d' , fontSize:'15px',marginTop:'25px',fontWeight:'300' , marginLeft:'25px'}}>
             <span >FACE DATA</span></div> 
 
-            <div   style={{marginTop:'15px', display:'flex'}} >
+            <div   style={{marginTop:'15px', display:'flex'}} onClick={openfacedata} >
              <span style={{marginLeft:'25px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                  Face 1 </span>
              <div style={{marginTop:'15px',display:'flex' , marginLeft:'255px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>
             </div>   
 
-            <div   style={{marginTop:'15px', display:'flex'}} >
+            <div   style={{marginTop:'15px', display:'flex'}} onClick={openfacedata}>
              <span style={{marginLeft:'25px',marginTop:'20px' ,fontSize:'20px',fontWeight:'550'}}>
                  Face 2 </span>
              <div style={{marginTop:'15px',display:'flex' , marginLeft:'255px',fontSize:'28px', fontWeight:'300'}}> &#62;</div>

@@ -10,8 +10,25 @@ import homeicon from './Images/home-icon.png';
 import batteryicon from './Images/battery.png';
 import passwordicon from './Images/fingerprint.png';
 
-import { useNavigate } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Line from '../Components/Line';
+import { useState } from 'react';
+import SearchBar from '../Components/SearchBar';
+import AboutPhone from './About-Phone-Section/AboutPhone';
+import LockScreen from './Lock-Screen-Section/LockScreen';
+import Battery from './Battery-Section/Battery';
+import SimCards from './SIM-Cards-Networks-Section/SimCards';
+import ConnectionAndSharing from './Connection-Sharing-Section/ConnectionAndSharing';
+import DisplayAndBrightness from './Display-Section/DisplayAndBrightness';
+import HomeScreen from './Home-Screen-Section/HomeScreen';
+import PasswordAndSecurity from './Password-Security-Section/PasswordAndSecurity';
+import SoundAndVibration from './Sound-Vibration-Section/SoundAndVibration';
+import BackupAndRestore from './About-Phone-Section/BackupAndRestore';
+import FactoryReset from './About-Phone-Section/FactoryReset';
+import SimcardSettings from './SIM-Cards-Networks-Section/SimcardSettings';
+import SilentDND from './Sound-Vibration-Section/SilentDND';
+import Ringtone from './Sound-Vibration-Section/Ringtone';
+import BrightnessLevel from './Display-Section/BrightnessLevel';
 
  
 
@@ -53,8 +70,31 @@ export default function HomePage(){
     const OpenPasswordAndSecurity=()=>{
         navigate('/password-security');
     }
+       
+    const [selectedComponent, setSelectedComponent] = useState(null);
 
-
+    const onComponentSelect = (componentName) => {
+      setSelectedComponent(componentName);
+      navigate(`/${componentName.toLowerCase().replace(' ', '-')}`); 
+    };
+  
+    
+    const components = [
+      'About Phone',
+      'Lock Screen',
+      'Battery',
+      'Display',
+      'connection-sharing',
+      'Simcards network',
+      'Sound vibration',
+      'Backup restore',
+      'Factory reset',
+      'Simcard settings',
+      'Silent DND',
+      'Choose ringtone ',
+      'Brightness level',
+      'Password security'
+    ];
 
     return(
 
@@ -64,13 +104,33 @@ export default function HomePage(){
 
             <div className='setting'>  Settings </div>
           
-           <div class="search-bar">
-            <div class="search-icon">
-                <i class="fa fa-search"></i> 
+            <div>
+                <SearchBar components={components} onComponentSelect={onComponentSelect} />
             </div>
-            <input class="search-input" type="text" placeholder="Search settings"/>
-            </div>
+
            
+            {selectedComponent && (
+                <Routes>
+                <Route path="/about-phone" element={<AboutPhone />} />
+                <Route path="/lock-screen" element={<LockScreen />} />
+                <Route path="/battery" element={<Battery />} />
+                <Route path="/connection-sharing" element={<ConnectionAndSharing/>} />
+                <Route path="/display" element={<DisplayAndBrightness/>} />
+                <Route path="/simcards-network" element={<SimCards/>} />
+                <Route path="/sound-vibration" element={<SoundAndVibration/>} />
+                <Route path="/home-screen" element={<HomeScreen/>} />
+                <Route path="/password-security" element={<PasswordAndSecurity/>} />
+                <Route path="/backup-restore" element={<BackupAndRestore/>}/>
+                <Route path="/factory-reset" element={<FactoryReset/>}></Route>
+                <Route path='/simcard-settings' element={<SimcardSettings/>}></Route>
+                <Route path='/silent-dnd' element={<SilentDND/>}></Route>
+                <Route path='/choose-ringtone' element={<Ringtone/>}></Route>
+                <Route path='/brightness-level' element={<BrightnessLevel/>}></Route>
+                <Route path="/password-security" element={<PasswordAndSecurity/>} />
+                </Routes>
+            )}
+            
+                    
             <div className="container1" onClick={OpenAboutPhone}>
                 <div className="img-icon ">
                     <img src={phoneicon} alt="Phone Icon" width="30" height="30"/>
