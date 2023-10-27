@@ -13,7 +13,7 @@ https://www.loom.com/share/b4e5e75c49a94d77b993b2659d898dea
 
 Implemented all the components for the frontend which is having 10 settings on the main page and 
 also having lots of nested pages.
-It is having a serach bar in the home page by which we can search the setting and can directly to that setting page which is searched.
+It is having a serach bar in the home page by which we can search the setting and can directly go to that setting page which is searched.
 
 
 Completed the backend part for the app whose functionalities are as follow---.
