@@ -6,7 +6,9 @@ completed the setting-app project using mern stack .
 
 
 Below is the link of loom video of my project-----
-https://www.loom.com/share/d4f9920c5f2d45f7929e582732d1530d
+https://www.loom.com/share/b4e5e75c49a94d77b993b2659d898dea
+
+
 
 
 Implemented all the components for the frontend which is having 10 settings on the main page and 
