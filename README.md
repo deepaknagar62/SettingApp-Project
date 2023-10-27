@@ -5,6 +5,10 @@ Project for Setting app using MERN stack
 completed the setting-app project using mern stack .
 
 
+Below is the link of loom video of my project-----
+https://www.loom.com/share/d4f9920c5f2d45f7929e582732d1530d
+
+
 Implemented all the components for the frontend which is having 10 settings on the main page and 
 also having lots of nested pages.
 It is having a serach bar in the home page by which we can search the setting and can directly to that setting page which is searched.
