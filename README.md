@@ -13,7 +13,7 @@ Below is the screen shot of my phone settings ----
 https://drive.google.com/file/d/1t-NKqKqLpeU6Tq4sKOY1lW5c25Xn7Jcx/view?usp=drivesdk
 
 Below is the link of netlify to see the frontend deployed live----
-https://marvelous-squirrel-44ab8c.netlify.app
+https://aquamarine-buttercream-6c6a6e.netlify.app
 
 Implemented all the components for the frontend which is having 10 settings on the main page and 
 also having lots of nested pages.
