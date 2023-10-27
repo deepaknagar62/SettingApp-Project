@@ -9,7 +9,8 @@ Below is the link of loom video of my project-----
 https://www.loom.com/share/b4e5e75c49a94d77b993b2659d898dea
 
 
-
+Below is the screen shot of my phone settings ----
+https://drive.google.com/file/d/1t-NKqKqLpeU6Tq4sKOY1lW5c25Xn7Jcx/view?usp=drivesdk
 
 Implemented all the components for the frontend which is having 10 settings on the main page and 
 also having lots of nested pages.
